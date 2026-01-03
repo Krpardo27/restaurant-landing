@@ -1,0 +1,97 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+    background-color: #ef4444;
+}
+
+.hero-swiper .swiper-button-prev {
+    left: 20px;
+}
+
+.hero-swiper .swiper-button-next {
+    right: 20px;
+}
+
+@media (max-width: 640px) {
+
+    .hero-swiper .swiper-button-next,
+    .hero-swiper .swiper-button-prev {
+        display: none;
+    }
+}
+
+
+.hero-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: all 0.3s ease;
+    border-radius: 9999px;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+    width: 26px;
+    background-color: #ef4444;
+    /* rojo pizza */
+}
+
+.hero-swiper .swiper-pagination {
+    bottom: 24px;
+}
+
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.gallery-swiper .swiper-button-next::after,
+.gallery-swiper .swiper-button-prev::after {
+    font-size: 14px;
+    color: white;
+}
+
+.gallery-swiper .swiper-button-next:hover,
+.gallery-swiper .swiper-button-prev:hover {
+    background: #ef4444;
+}
+
+.gallery-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.gallery-swiper .swiper-pagination-bullet-active {
+    background: #ef4444;
+}
