@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const HeroSlider = () => {
+
   return (
     <section id="home" className="relative w-full">
       <Swiper
@@ -28,7 +29,7 @@ const HeroSlider = () => {
               className="
             relative
             w-full
-            h-[80vh] lg:h-[800px]
+            min-h-[100svh] lg:min-h-[800px]
             bg-cover bg-center
             flex items-center justify-center
           "

@@ -4,10 +4,11 @@ const About = () => {
       id="about"
       className="
         bg-[#161616]
-        py-28
+        lg:py-28 
+        py-12
       "
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 max-w-7xl">
         {/* Header */}
         <header className="max-w-3xl mb-20">
           <h2 className="font-serif text-3xl md:text-5xl mb-6 text-accent">

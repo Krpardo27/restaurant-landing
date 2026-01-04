@@ -47,6 +47,9 @@ export const pizzas = [
     ],
     price: "$8.990",
     image: "/images/pizzas/margarita-clasica.jpg",
+    category: "clasicas",
+    spicy: false,
+    vegan: false,
   },
   {
     id: 2,
@@ -58,6 +61,9 @@ export const pizzas = [
     ingredients: ["Pepperoni", "Mozzarella", "Salsa de tomate"],
     price: "$10.990",
     image: "/images/pizzas/pepperoni-artesanal.jpg",
+    category: "especiales",
+    spicy: true, // 🌶️
+    vegan: false,
   },
   {
     id: 3,
@@ -69,6 +75,9 @@ export const pizzas = [
     ingredients: ["Mozzarella", "Gorgonzola", "Parmesano", "Provolone"],
     price: "$11.990",
     image: "/images/pizzas/pizza-cuatro-quesos.jpg",
+    category: "clasicas",
+    spicy: false,
+    vegan: false,
   },
   {
     id: 4,
@@ -80,6 +89,9 @@ export const pizzas = [
     ingredients: ["Prosciutto", "Rúcula", "Mozzarella", "Aceite de oliva"],
     price: "$12.990",
     image: "/images/pizzas/pizza-rucula.jpg",
+    category: "especiales",
+    spicy: false,
+    vegan: false,
   },
   {
     id: 5,
@@ -91,6 +103,9 @@ export const pizzas = [
     ingredients: ["Aceitunas", "Alcaparras", "Mozzarella", "Salsa de tomate"],
     price: "$12.990",
     image: "/images/pizzas/pizza-aceitunas.jpg",
+    category: "especiales",
+    spicy: false,
+    vegan: false,
   },
   {
     id: 6,
@@ -102,6 +117,9 @@ export const pizzas = [
     ingredients: ["Prosciutto", "Mozzarella", "Albahaca"],
     price: "$12.990",
     image: "/images/pizzas/pizza-albaca.jpg",
+    category: "especiales",
+    spicy: false,
+    vegan: false,
   },
   {
     id: 7,
@@ -119,6 +137,9 @@ export const pizzas = [
     ],
     price: "$12.990",
     image: "/images/pizzas/pizza-2.jpg",
+    category: "veganas",
+    spicy: false,
+    vegan: true, // 🌱
   },
   {
     id: 8,
@@ -130,6 +151,9 @@ export const pizzas = [
     ingredients: ["Zapallo italiano", "Berenjena", "Pimentón", "Mozzarella"],
     price: "$12.990",
     image: "/images/pizzas/pizza-vegetariana.jpg",
+    category: "clasicas",
+    spicy: false,
+    vegan: false,
   },
 ];
 

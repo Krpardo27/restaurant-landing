@@ -3,8 +3,8 @@ import { pizzas } from "../data.js";
 
 const Pizzas = () => {
   return (
-    <section id="menu" className="py-24 container mx-auto px-6">
-      <div className="container">
+    <section id="featured" className="lg:py-24 py-12 ">
+      <div className="container mx-auto px-6 max-w-7xl ">
         {/* Header */}
         <header className="max-w-2xl mb-16">
           <h2

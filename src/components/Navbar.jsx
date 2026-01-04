@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Inicio", to: "home" },
+  { label: "Destacados", to: "featured" },
   { label: "Menú", to: "menu" },
   { label: "Nosotros", to: "about" },
   { label: "Galería", to: "gallery" },
@@ -24,7 +25,6 @@ const Navbar = ({ scrolled }) => {
     const scrollOpts = {
       smooth: true,
       duration: 600,
-      offset: -72, // ajusta a tu header real
     };
 
     if (location.pathname !== "/") {

@@ -10,8 +10,8 @@ import "swiper/css/pagination";
 
 const GallerySlider = () => {
   return (
-    <section id="gallery" className="py-24 ">
-      <div className="container mx-auto px-6">
+    <section id="gallery" className="lg:py-24 py-12">
+      <div className="container mx-auto px-6 max-w-7xl">
         <div
           className="
           grid grid-cols-1

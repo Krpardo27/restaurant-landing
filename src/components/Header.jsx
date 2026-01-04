@@ -3,69 +3,62 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import MobileMenu from "./MobileMenu";
+import MenuButton from "./MenuButton";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
-      <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          boxShadow: scrolled
-            ? "0 10px 30px rgba(0,0,0,0.35)"
-            : "0 0 0 rgba(0,0,0,0)",
-        }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+      {/* HEADER NO ANIMADO */}
+      <header
         className={`
           fixed top-0 inset-x-0 z-50
-          transition-all duration-300
+          border-b
           ${
             scrolled
-              ? "bg-[#141414] h-14 shadow-lg border-b border-white/10"
-              : "bg-neutral-900/70 backdrop-blur-md h-16 border-b border-white/5"
+              ? "bg-[#141414] border-white/10 shadow-lg"
+              : "bg-neutral-900/70 backdrop-blur-md border-white/5"
           }
         `}
       >
-        <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+        {/* CONTENIDO ANIMADO */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="max-w-7xl mx-auto px-6 flex items-center justify-between"
+          style={{
+            paddingTop: scrolled ? 12 : 16,
+            paddingBottom: scrolled ? 12 : 16,
+          }}
+        >
           {/* LOGO */}
-          <Link
-            to="/"
-            className={`
-              text-xl font-bold tracking-wide
-              transition-transform duration-300
-              ${scrolled ? "scale-95" : "scale-100"}
-            `}
+          <motion.div
+            animate={{ scale: scrolled ? 0.95 : 1 }}
+            transition={{ duration: 0.2 }}
           >
-            <span className="text-white">
+            <Link to="/" className="text-xl font-bold tracking-wide text-white">
               PIZZA<span className="text-accent">NOVA</span>
-            </span>
-          </Link>
+            </Link>
+          </motion.div>
 
-          {/* NAV DESKTOP */}
+          {/* NAV */}
           <Navbar scrolled={scrolled} />
 
           {/* CTA DESKTOP */}
-          <div className="hidden md:block">
+          <div className="hidden lg:flex gap-3">
+            <MenuButton />
             <Link
               to="/contact"
-              className="
-                bg-accent hover:bg-accentDark
-                text-white text-sm font-medium
-                px-5 py-2 rounded-lg
-                transition
-              "
+              className="bg-accent hover:bg-accentDark text-white text-sm font-medium px-5 py-2 rounded-lg transition"
             >
               Reservar
             </Link>
@@ -83,10 +76,9 @@ const Header = () => {
               <span className="block w-6 h-[2px] bg-white" />
             </div>
           </button>
-        </div>
-      </motion.header>
+        </motion.div>
+      </header>
 
-      {/* MOBILE MENU */}
       <MobileMenu open={open} onClose={() => setOpen(false)} />
     </>
   );
