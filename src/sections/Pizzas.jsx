@@ -1,94 +1,109 @@
 import { Link } from "react-router-dom";
 import { pizzas } from "../data.js";
 
+const PHONE = "56912345678";
+
 const Pizzas = () => {
   return (
-    <section id="featured" className="lg:py-24 py-12 ">
-      <div className="container mx-auto px-6 max-w-7xl ">
+    <section id="featured" className="py-16 lg:py-24 bg-zinc-950 text-white">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <header className="max-w-2xl mb-16">
-          <h2
-            className="
-            font-serif
-            text-3xl md:text-5xl
-            mb-4
-          "
-          >
-            Nuestras Pizzas
+        <header className="max-w-2xl mb-14">
+          <h2 className="font-serif text-4xl md:text-5xl mb-3">
+            Nuestras Pizzas 🍕
           </h2>
 
-          <p className="text-muted text-lg leading-relaxed">
-            Cada pizza es preparada con masa de fermentación lenta, ingredientes
-            frescos y recetas inspiradas en la tradición italiana. Un equilibrio
-            perfecto entre sabor y textura.
+          <p className="text-zinc-400 text-lg">
+            Masa de fermentación lenta, ingredientes frescos y recetas
+            auténticas de Italia.
+            <span className="text-red-500 italic block mt-1">
+              Pizzería y sabores de Italia 🇮🇹
+            </span>
           </p>
         </header>
 
         {/* Grid */}
-        <div
-          className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-4
-          gap-8
-        "
-        >
-          {pizzas.map((pizza) => (
-            <article
-              key={pizza.id}
-              className="
-                rounded-2xl
-                overflow-hidden
-                shadow-soft
-                transition
-                hover:-translate-y-1
-                hover:shadow-glow
-                shadow-lg
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {pizzas.map((pizza) => {
+            const wa = `https://wa.me/${PHONE}?text=Hola,%20quiero%20la%20pizza%20${pizza.name}`;
 
-              "
-            >
-              {/* Imagen */}
-
-              <div className="relative h-56 overflow-hidden rounded-t-2xl">
-                <img
-                  src={pizza.image}
-                  alt={pizza.name}
-                  className="
-                    w-full h-full
-                    object-cover
-                    transition-transform duration-500
-                    hover:scale-110
-                  "
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6 space-y-3">
-                <h3 className="text-xl font-semibold">{pizza.name}</h3>
-
-                <p className="text-muted text-sm">{pizza.description}</p>
-
-                <div className="flex items-center justify-between pt-4">
-                  <span className="text-accent font-semibold">
-                    {pizza.price}
-                  </span>
-
-                  <Link
-                    to={`/pizza/${pizza.slug}`}
+            return (
+              <article
+                key={pizza.id}
+                className="
+                  bg-zinc-900 rounded-3xl overflow-hidden
+                  border border-white/5
+                  hover:border-red-500/40
+                  transition group shadow-lg
+                "
+              >
+                {/* Imagen */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={pizza.image}
+                    alt={`Pizza artesanal ${pizza.name}`}
                     className="
-    text-sm px-4 py-2 rounded-lg
-    border border-white/10
-    hover:border-accent hover:text-accent
-    transition
-  "
-                  >
-                    Ver más
-                  </Link>
+                      w-full h-full object-cover
+                      transition-transform duration-700
+                      group-hover:scale-110
+                    "
+                  />
+
+                  {/* Badge */}
+                  {pizza.popular && (
+                    <span
+                      className="
+                      absolute top-3 left-3
+                      bg-red-600 text-xs px-3 py-1 rounded-full shadow
+                    "
+                    >
+                      ⭐ Más pedida
+                    </span>
+                  )}
                 </div>
-              </div>
-            </article>
-          ))}
+
+                {/* Content */}
+                <div className="p-6 space-y-3">
+                  <h3 className="text-xl font-semibold">{pizza.name}</h3>
+
+                  <p className="text-zinc-400 text-sm">{pizza.description}</p>
+
+                  <div className="flex items-center justify-between pt-4">
+                    <span className="text-red-500 font-bold text-lg">
+                      {pizza.price}
+                    </span>
+
+                    <div className="flex gap-2">
+                      <Link
+                        to={`/pizza/${pizza.slug}`}
+                        className="
+                          text-xs px-3 py-2 rounded-lg
+                          border border-white/10
+                          hover:border-red-500 hover:text-red-500
+                          transition
+                        "
+                      >
+                        Ver
+                      </Link>
+
+                      <a
+                        href={wa}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                          bg-green-500 hover:bg-green-600
+                          text-white text-xs px-3 py-2 rounded-lg
+                          transition shadow
+                        "
+                      >
+                        Pedir
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

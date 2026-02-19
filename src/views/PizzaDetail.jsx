@@ -3,6 +3,8 @@ import { pizzas } from "../data";
 import { motion } from "framer-motion";
 import { pageFadeUp } from "../animations/pageVariants";
 
+const PHONE = "56912345678"; // cambia número
+
 const PizzaDetail = () => {
   const { slug } = useParams();
   const pizza = pizzas.find((p) => p.slug === slug);
@@ -10,77 +12,100 @@ const PizzaDetail = () => {
   if (!pizza) {
     return (
       <div className="py-32 text-center">
-        <p className="text-muted">Pizza no encontrada</p>
-        <Link to="/" className="text-accent underline">
-          Volver al inicio
+        <p className="text-zinc-400">Pizza no encontrada</p>
+        <Link to="/" className="text-red-500 underline">
+          Volver al menú
         </Link>
       </div>
     );
   }
 
+  const waLink = `https://wa.me/${PHONE}?text=Hola,%20quiero%20la%20pizza%20${pizza.name}`;
+
   return (
-    <motion.section
-      variants={pageFadeUp}
-      initial="hidden"
-      animate="visible"
-      className="
-        min-h-[calc(100vh-72px)]
-        flex items-center
-        py-16
-      "
-    >
-      <div className="container mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-[calc(100vh-72px)] py-16 bg-zinc-950 text-white">
+      <motion.div
+        variants={pageFadeUp}
+        initial="hidden"
+        animate="visible"
+        className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center my-20"
+      >
+        {/* Imagen */}
+        <div className="relative group">
+          <img
+            src={pizza.image}
+            alt={`Pizza artesanal ${pizza.name}`}
+            className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+          />
 
-          {/* Imagen */}
-          <div className="rounded-3xl overflow-hidden shadow-soft">
-            <img
-              src={pizza.image}
-              alt={pizza.name}
-              className="w-full  object-cover"
-            />
-          </div>
+          {/* Badge artesanal */}
+          <span className="absolute top-4 left-4 bg-red-600 text-sm px-3 py-1 rounded-full shadow">
+            🍕 Artesanal
+          </span>
+        </div>
 
-          {/* Contenido */}
-          <div className="space-y-6">
-            <Link
-              to="/"
-              className="text-sm text-muted hover:text-accent transition"
-            >
-              ← Volver al menú
-            </Link>
+        {/* Contenido */}
+        <div className="space-y-6">
+          <Link
+            to="/"
+            className="text-sm text-zinc-400 hover:text-red-500 transition"
+          >
+            ← Volver al menú
+          </Link>
 
-            <h1 className="font-serif text-4xl md:text-5xl">
+          <div>
+            <h1 className="font-serif text-4xl md:text-5xl leading-tight">
               {pizza.name}
             </h1>
-
-            <p className="text-muted text-lg leading-relaxed">
-              {pizza.longDescription}
+            <p className="text-red-500 mt-1 italic">
+              Pizzería y sabores de Italia 🇮🇹
             </p>
-
-            <div>
-              <h3 className="font-semibold mb-2">Ingredientes</h3>
-              <ul className="grid grid-cols-2 gap-2 text-sm text-muted">
-                {pizza.ingredients.map((item, i) => (
-                  <li key={i}>• {item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex items-center gap-6 pt-6 border-t border-white/10">
-              <span className="text-2xl font-bold text-accent">
-                {pizza.price}
-              </span>
-
-              <button className="bg-accent hover:bg-accentDark px-6 py-3 rounded-lg transition">
-                Ordenar ahora
-              </button>
-            </div>
           </div>
 
+          <p className="text-zinc-300 text-lg leading-relaxed">
+            {pizza.longDescription}
+          </p>
+
+          {/* Ingredientes */}
+          <div>
+            <h3 className="font-semibold mb-2 text-red-500">
+              Ingredientes frescos
+            </h3>
+            <ul className="grid grid-cols-2 gap-2 text-sm text-zinc-400">
+              {pizza.ingredients.map((item, i) => (
+                <li key={i}>• {item}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Precio + CTA */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5 pt-6 border-t border-zinc-700">
+            <span className="text-3xl font-bold text-red-500">
+              {pizza.price}
+            </span>
+
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                bg-green-500 hover:bg-green-600
+                px-6 py-3 rounded-xl
+                font-semibold shadow-lg
+                transition flex items-center justify-center gap-2
+              "
+            >
+              📲 Pedir por WhatsApp
+            </a>
+          </div>
+
+          {/* Info extra */}
+          <div className="text-sm text-zinc-400 pt-4">
+            ⏱️ Preparación artesanal · 20-30 min 📍 Retiro en local o despacho
+          </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

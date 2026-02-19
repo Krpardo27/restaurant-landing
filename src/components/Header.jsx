@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import MobileMenu from "./MobileMenu";
-import MenuButton from "./MenuButton";
+import Informacion from "./Informacion";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,54 +17,42 @@ const Header = () => {
 
   return (
     <>
-      {/* HEADER NO ANIMADO */}
       <header
         className={`
-          fixed top-0 inset-x-0 z-50
-          border-b
+          fixed top-0 inset-x-0 z-50 border-b
           ${
             scrolled
-              ? "bg-[#141414] border-white/10 shadow-lg"
-              : "bg-neutral-900/70 backdrop-blur-md border-white/5"
+              ? "bg-zinc-950 border-red-500/20 shadow-lg"
+              : "bg-zinc-950/70 backdrop-blur-md border-white/5"
           }
         `}
       >
-        {/* CONTENIDO ANIMADO */}
         <motion.div
-          initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.3 }}
           className="max-w-7xl mx-auto px-6 flex items-center justify-between"
           style={{
-            paddingTop: scrolled ? 12 : 16,
-            paddingBottom: scrolled ? 12 : 16,
+            paddingTop: scrolled ? 10 : 16,
+            paddingBottom: scrolled ? 10 : 16,
           }}
         >
-          {/* LOGO */}
-          <motion.div
-            animate={{ scale: scrolled ? 0.95 : 1 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link to="/" className="text-xl font-bold tracking-wide text-white">
-              PIZZA<span className="text-accent">NOVA</span>
+          {/* LOGO + SLOGAN */}
+          <motion.div animate={{ scale: scrolled ? 0.95 : 1 }}>
+            <Link to="/" className="flex flex-col leading-tight">
+              <span className="text-xl font-serif text-white tracking-wide">
+                PIZZERÍA <span className="text-red-500">NOVA</span>
+              </span>
+              <span className="text-[11px] text-zinc-400 italic">
+                Pizzería y sabores de Italia 🇮🇹
+              </span>
             </Link>
           </motion.div>
 
           {/* NAV */}
           <Navbar scrolled={scrolled} />
 
-          {/* CTA DESKTOP */}
-          <div className="hidden lg:flex gap-3">
-            <MenuButton />
-            <Link
-              to="/contact"
-              className="bg-accent hover:bg-accentDark text-white text-sm font-medium px-5 py-2 rounded-lg transition"
-            >
-              Reservar
-            </Link>
-          </div>
+          <Informacion />
 
-          {/* BURGER MOBILE */}
           <button
             onClick={() => setOpen(true)}
             className="lg:hidden text-white"
