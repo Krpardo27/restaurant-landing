@@ -55,31 +55,33 @@ const Navbar = ({ scrolled }) => {
           const isActive = active === item.to;
 
           return (
-            <motion.button
+            <motion.a
               key={item.to}
-              onClick={() => handleNavigation(item.to)}
+              href={`#${item.to}`} 
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation(item.to);
+              }}
               whileTap={{ scale: 0.96 }}
               className={`
-                relative text-sm font-medium transition-colors
-                ${
-                  scrolled
-                    ? "text-zinc-300 hover:text-white"
-                    : "text-zinc-200 hover:text-white"
-                }
-                ${isActive ? "!text-white" : ""}
-              `}
+    relative text-sm font-medium transition-colors
+    ${
+      scrolled
+        ? "text-zinc-300 hover:text-white"
+        : "text-zinc-200 hover:text-white"
+    }
+    ${isActive ? "!text-white" : ""}
+  `}
             >
               {item.label}
 
               {isActive && isHome && (
                 <motion.span
                   layoutId="nav-underline"
-                  initial={false}
                   className="absolute -bottom-1 left-0 h-[2px] w-full bg-red-500"
-                  transition={{ type: "spring", stiffness: 500, damping: 36 }}
                 />
               )}
-            </motion.button>
+            </motion.a>
           );
         })}
       </nav>

@@ -175,7 +175,7 @@ export const galleryImages = [
   },
   {
     id: 4,
-    image: "pizzas/hero-4",
+    image: "pizzas/hero-4_mh6rsv",
     alt: "Pizza servida en mesa de madera",
   },
 ];
