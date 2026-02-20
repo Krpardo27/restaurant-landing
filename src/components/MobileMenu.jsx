@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { scroller } from "react-scroll";
 
 const PHONE = "56912345678";
 
@@ -58,17 +58,22 @@ const MobileMenu = ({ open, onClose }) => {
           {/* Nav */}
           <nav className="flex flex-col gap-5 text-lg">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.to}
-                to={item.to}
-                smooth
-                duration={600}
-                offset={-64}
-                onClick={onClose}
+                href={`#${item.to}`} 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scroller.scrollTo(item.to, {
+                    smooth: true,
+                    duration: 600,
+                    offset: -64,
+                  });
+                  onClose();
+                }}
                 className="hover:text-red-500 transition"
               >
                 {item.label}
-              </Link>
+              </a>
             ))}
           </nav>
 

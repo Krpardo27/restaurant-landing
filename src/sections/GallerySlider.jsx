@@ -7,6 +7,8 @@ import "../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { cld, cldSrcSet, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
+
 
 const PHONE = "56912345678";
 
@@ -46,9 +48,12 @@ const GallerySlider = () => {
             {galleryImages.map((item) => (
               <SwiperSlide key={item.id}>
                 <img
-                  src={item.image}
+                  src={cld(item.image, 1200)}
+                  srcSet={cldSrcSet(item.image)}
+                  sizes="(max-width:1024px) 95vw, 50vw"
                   alt={item.alt}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-[420px] object-cover"
                 />
               </SwiperSlide>
@@ -61,10 +66,13 @@ const GallerySlider = () => {
           {galleryImages.slice(0, 4).map((img) => (
             <img
               key={img.id}
-              src={img.image}
+              src={cldThumb(img.image, 240)}
+              srcSet={cldThumbSrcSet(img.image)}
+              sizes="50vw"
               alt={img.alt}
-              className="rounded-xl object-cover h-36 w-full"
               loading="lazy"
+              decoding="async"
+              className="rounded-xl object-cover h-36 w-full"
             />
           ))}
         </div>
