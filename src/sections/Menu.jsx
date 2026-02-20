@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { pizzas } from "../data";
 import { motion } from "framer-motion";
+import { cld, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
 
 const PHONE = "56912345678";
 
@@ -85,13 +86,17 @@ const Menu = () => {
                     >
                       {/* FOTO MINI */}
                       <img
-                        src={pizza.image}
+                        src={cldThumb(pizza.image, 160)}
+                        srcSet={cldThumbSrcSet(pizza.image)}
+                        sizes="80px"
                         alt={`Pizza artesanal ${pizza.name}`}
+                        loading="lazy"
+                        decoding="async"
                         className="
-                          w-20 h-20 object-cover rounded-xl
-                          shadow-md flex-shrink-0
-                          group-hover:scale-105 transition
-                        "
+    w-20 h-20 object-cover rounded-xl
+    shadow-md flex-shrink-0
+    group-hover:scale-105 transition
+  "
                       />
 
                       <div className="flex-1">

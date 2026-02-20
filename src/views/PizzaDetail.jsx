@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { pizzas } from "../data";
 import { motion } from "framer-motion";
 import { pageFadeUp } from "../animations/pageVariants";
+import { cldDetail, cldDetailSrcSet } from "../utils/cloudinary";
 
 const PHONE = "56912345678"; // cambia número
 
@@ -33,10 +34,14 @@ const PizzaDetail = () => {
         {/* Imagen */}
         <div className="relative group">
           <img
-            src={pizza.image}
-            alt={`Pizza artesanal ${pizza.name}`}
-            className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
-          />
+  src={cldDetail(pizza.image, 1200)}
+  srcSet={cldDetailSrcSet(pizza.image)}
+  sizes="(max-width:1024px) 95vw, 50vw"
+  alt={`Pizza artesanal ${pizza.name}`}
+  loading="eager"
+  decoding="async"
+  className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+/>
 
           {/* Badge artesanal */}
           <span className="absolute top-4 left-4 bg-red-600 text-sm px-3 py-1 rounded-full shadow">
