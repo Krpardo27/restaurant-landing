@@ -11,9 +11,15 @@
       property="og:image"
       content="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto,w_1200/pizzas/hero-1"
     />
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- PRECONNECT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- SOLO UNA FUENTE -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <meta property="og:type" content="website" />
     <link rel="preload" href="/assets/index.css" as="style" />
     <link rel="stylesheet" href="/assets/index.css" />
@@ -21,10 +27,16 @@
     <link
       rel="preload"
       as="image"
-      href="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto,w_1600/pizzas/hero-1_wpoo1v"
+      href="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_1600/pizzas/hero-1_wpoo1v"
+      imagesrcset="
+    https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_800/pizzas/hero-1_wpoo1v 800w,
+    https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_1200/pizzas/hero-1_wpoo1v 1200w,
+    https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_1600/pizzas/hero-1_wpoo1v 1600w
+  "
+      imagesizes="100vw"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>restaurant-landing</title>
+    <title>Pizzería Artesanal 🍕</title>
   </head>
   <body>
     <div id="root"></div>
