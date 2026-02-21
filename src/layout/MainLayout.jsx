@@ -26,8 +26,10 @@ const MainLayout = () => {
         rel="noopener noreferrer"
         className="
           fixed bottom-5 right-5 z-10
-          bg-green-500 hover:bg-green-600
-          text-white px-4 py-3 rounded-full shadow-xl
+            bg-green-700 hover:bg-green-800
+    text-white font-semibold
+    px-6 py-3 rounded-full
+    shadow-lg transition
         "
       >
         📲 Pedir

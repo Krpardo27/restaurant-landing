@@ -34,15 +34,12 @@ const Hero = () => {
           de Italia.
         </p>
 
-        <Link
-          to="pizzas"
-          smooth={true}
-          duration={600}
-          offset={-80} 
-          className="inline-block bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full text-white font-semibold shadow-lg transition cursor-pointer"
+        <a
+          href="#pizzas"
+          className="inline-block bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full text-white font-semibold shadow-lg transition"
         >
           Ver nuestras pizzas 🍕
-        </Link>
+        </a>
       </div>
     </section>
   );
