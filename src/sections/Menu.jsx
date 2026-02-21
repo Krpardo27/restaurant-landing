@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { pizzas } from "../data";
 import { motion } from "framer-motion";
-import { cld, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
+import { cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
 
 const PHONE = "56912345678";
 
