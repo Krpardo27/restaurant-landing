@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { pageFadeUp } from "../animations/pageVariants";
 import { cldDetail, cldDetailSrcSet } from "../utils/cloudinary";
 
-const PHONE = "56912345678"; // cambia número
+const PHONE = "56912345678"; 
 
 const PizzaDetail = () => {
   const { slug } = useParams();

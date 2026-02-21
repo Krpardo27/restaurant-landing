@@ -2,13 +2,13 @@ const CLOUD = import.meta.env.VITE_CLOUDINARY_CLOUD;
 console.log(CLOUD);
 
 export const cld = (id, w = 800) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,g_auto,w_${w}/${id}`;
+  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w}/${id}`;
 
 export const cldThumb = (id, w = 200) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,g_auto,w_${w},h_${w}/${id}`;
+  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w},h_${w}/${id}`;
 
 export const cldDetail = (id, w = 1200) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,g_auto,w_${w},h_800/${id}`;
+  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w},h_800/${id}`;
 
 export const cldSrcSet = (id) => `
   ${cld(id, 400)} 400w,

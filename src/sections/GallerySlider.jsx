@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { cld, cldSrcSet, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
 
-
 const PHONE = "56912345678";
 
 const GallerySlider = () => {
