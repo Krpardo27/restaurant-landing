@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { pizzas } from "../data.js";
-import { cld, cldCardSrcSet} from "../utils/cloudinary.js";
+import { cldCard, cldCardSrcSet } from "../utils/cloudinary.js";
 
 const PHONE = "56912345678";
 
@@ -41,15 +41,17 @@ const Pizzas = () => {
                 {/* Imagen */}
                 <div className="relative h-56 overflow-hidden">
                   <img
-                    src={cld(pizza.image, 800)}
+                    src={cldCard(pizza.image, 360)}
                     srcSet={cldCardSrcSet(pizza.image)}
-                    sizes="(max-width:640px) 95vw,
-                           (max-width:1024px) 48vw,
-                           25vw"
+                    sizes="
+(max-width:640px) 90vw,
+(max-width:1024px) 45vw,
+300px
+"
                     alt={`Pizza artesanal ${pizza.name}`}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
 
                   {/* Badge */}
