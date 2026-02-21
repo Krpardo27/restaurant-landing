@@ -7,16 +7,10 @@ import "../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-<<<<<<< HEAD
-import { cld, cldSrcSet, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
-=======
 import {
   cldGallery,
   cldGallerySrcSet,
-  cldThumb,
-  cldThumbSrcSet,
 } from "../utils/cloudinary";
->>>>>>> ab482a67f33b30ec482af3d610f94ae2a2d5ce28
 
 const PHONE = "56912345678";
 

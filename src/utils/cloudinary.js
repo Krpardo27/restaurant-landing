@@ -1,15 +1,5 @@
 const CLOUD = import.meta.env.VITE_CLOUDINARY_CLOUD;
 
-<<<<<<< HEAD
-export const cld = (id, w = 800) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w}/${id}`;
-
-export const cldThumb = (id, w = 200) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w},h_${w}/${id}`;
-
-export const cldDetail = (id, w = 1200) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,c_fill,q_auto:eco,w_${w},h_800/${id}`;
-=======
 const BASE = (id, opts) =>
   `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,dpr_auto,q_auto:eco,c_fill,g_auto/${opts}/${id}`;
 export const cldHero = (id, w = 1600) =>
@@ -19,7 +9,6 @@ export const cldThumb = (id, w = 160) => BASE(id, `w_${w},h_${w},q_auto:low`);
 
 export const cldDetail = (id, w = 1200) =>
   BASE(id, `w_${w},ar_4:3,q_auto:good`);
->>>>>>> ab482a67f33b30ec482af3d610f94ae2a2d5ce28
 
 export const cldCard = (id, w = 360) =>
   `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_4:3,w_${w}/${id}`;
