@@ -85,7 +85,7 @@ const Pizzas = () => {
                           text-xs px-3 py-2 rounded-lg
                           border border-white/10
                           hover:border-red-500 hover:text-red-500
-                          transition
+                          transition flex items-center
                         "
                       >
                         Ver
