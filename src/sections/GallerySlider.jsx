@@ -7,7 +7,16 @@ import "../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+<<<<<<< HEAD
 import { cld, cldSrcSet, cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
+=======
+import {
+  cldGallery,
+  cldGallerySrcSet,
+  cldThumb,
+  cldThumbSrcSet,
+} from "../utils/cloudinary";
+>>>>>>> ab482a67f33b30ec482af3d610f94ae2a2d5ce28
 
 const PHONE = "56912345678";
 
@@ -41,14 +50,14 @@ const GallerySlider = () => {
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
-            loop
+            loop={false}
             className="hero-swiper rounded-3xl overflow-hidden"
           >
             {galleryImages.map((item) => (
               <SwiperSlide key={item.id}>
                 <img
-                  src={cld(item.image, 1200)}
-                  srcSet={cldSrcSet(item.image)}
+                  src={cldGallery(item.image, 1200)}
+                  srcSet={cldGallerySrcSet(item.image)}
                   sizes="(max-width:1024px) 95vw, 50vw"
                   alt={item.alt}
                   loading="lazy"
@@ -62,13 +71,13 @@ const GallerySlider = () => {
 
         {/* GRID MOBILE */}
         <div className="grid grid-cols-2 gap-4 lg:hidden">
-          {galleryImages.slice(0, 4).map((img) => (
+          {galleryImages.slice(0, 4).map((item) => (
             <img
-              key={img.id}
-              src={cldThumb(img.image, 240)}
-              srcSet={cldThumbSrcSet(img.image)}
-              sizes="50vw"
-              alt={img.alt}
+              key={item.id}
+              src={cldGallery(item.image, 800)}
+              srcSet={cldGallerySrcSet(item.image)}
+              sizes="45vw"
+              alt={item.alt}
               loading="lazy"
               decoding="async"
               className="rounded-xl object-cover h-36 w-full"
