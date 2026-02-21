@@ -7,14 +7,11 @@ import "../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import {
-  cldGallery,
-  cldGallerySrcSet,
-} from "../utils/cloudinary";
+import { cldGallery, cldGallerySrcSet } from "../utils/cloudinary";
 
 const PHONE = "56912345678";
 
-const GallerySlider = () => {
+const Gallery = () => {
   return (
     <section id="gallery" className="lg:py-24 py-14 bg-zinc-950 text-white">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -83,4 +80,4 @@ const GallerySlider = () => {
   );
 };
 
-export default GallerySlider;
+export default Gallery;

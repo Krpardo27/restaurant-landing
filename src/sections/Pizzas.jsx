@@ -6,7 +6,7 @@ const PHONE = "56912345678";
 
 const Pizzas = () => {
   return (
-    <section id="featured" className="py-16 lg:py-24 bg-zinc-950 text-white">
+    <section id="pizzas" className="py-16 lg:py-24 bg-zinc-950 text-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <header className="max-w-2xl mb-14">

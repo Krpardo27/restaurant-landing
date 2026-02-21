@@ -1,22 +1,24 @@
 import { lazy, Suspense } from "react";
 
-import HeroSlider from "../sections/HeroSlider";
 import Pizzas from "../sections/Pizzas";
 import Menu from "../sections/Menu";
 import About from "../sections/About";
+import Hero from "../sections/Hero";
+import HeroSlider from "../components/HeroSlider";
 
-const GallerySlider = lazy(() => import("../sections/GallerySlider"));
+const Gallery = lazy(() => import("../sections/Gallery"));
 
 const Home = () => {
   return (
     <>
-      <HeroSlider />
+      <Hero />
       <Pizzas />
       <Menu />
+      <HeroSlider />
       <About />
 
       <Suspense fallback={null}>
-        <GallerySlider />
+        <Gallery />
       </Suspense>
     </>
   );
