@@ -29,7 +29,10 @@ const Gallery = () => {
           <a
             href={`https://wa.me/${PHONE}?text=Hola,%20quiero%20hacer%20una%20reserva`}
             target="_blank"
-            className="inline-block bg-green-500 hover:bg-green-600 px-6 py-3 rounded-full shadow-lg"
+            className="inline-block bg-green-700 hover:bg-green-800
+    text-white font-semibold
+    px-6 py-3 rounded-xl
+    shadow-lg transition"
           >
             📲 Reservar mesa
           </a>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { pageFadeUp } from "../animations/pageVariants";
 import { cldDetail, cldDetailSrcSet } from "../utils/cloudinary";
 
-const PHONE = "56912345678"; 
+const PHONE = "56912345678";
 
 const PizzaDetail = () => {
   const { slug } = useParams();
@@ -62,9 +62,9 @@ const PizzaDetail = () => {
           </Link>
 
           <div>
-            <h1 className="font-serif text-4xl md:text-5xl leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight">
               {pizza.name}
-            </h1>
+            </h2>
             <p className="text-red-500 mt-1 italic">
               Pizzería y sabores de Italia 🇮🇹
             </p>
@@ -97,11 +97,11 @@ const PizzaDetail = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-green-500 hover:bg-green-600
-                px-6 py-3 rounded-xl
-                font-semibold shadow-lg
-                transition flex items-center justify-center gap-2
-              "
+    bg-green-700 hover:bg-green-800
+    text-white font-semibold
+    px-6 py-3 rounded-xl
+    shadow-lg transition
+  "
             >
               📲 Pedir por WhatsApp
             </a>

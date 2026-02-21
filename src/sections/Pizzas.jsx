@@ -51,7 +51,7 @@ const Pizzas = () => {
                     alt={`Pizza artesanal ${pizza.name}`}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
 
                   {/* Badge */}
@@ -96,9 +96,10 @@ const Pizzas = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                          bg-green-500 hover:bg-green-600
-                          text-white text-xs px-3 py-2 rounded-lg
-                          transition shadow
+                          bg-green-700 hover:bg-green-800
+    text-white font-semibold
+    px-6 py-3 rounded-xl
+    shadow-lg transition
                         "
                       >
                         Pedir
