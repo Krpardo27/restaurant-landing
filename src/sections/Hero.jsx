@@ -33,13 +33,6 @@ const Hero = () => {
           Masa de fermentación lenta, ingredientes frescos y recetas auténticas
           de Italia.
         </p>
-
-        <a
-          href="#pizzas"
-          className="inline-block bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full text-white font-semibold shadow-lg transition"
-        >
-          Ver nuestras pizzas 🍕
-        </a>
       </div>
     </section>
   );
