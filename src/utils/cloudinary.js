@@ -1,17 +1,16 @@
 const CLOUD = import.meta.env.VITE_CLOUDINARY_CLOUD;
 
 const BASE = (id, opts) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,dpr_auto,q_auto:eco,c_fill,g_auto/${opts}/${id}`;
-export const cldHero = (id, w = 1600) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,dpr_auto,q_auto:eco,c_fill,g_auto,ar_16:9,w_${w}/${id}`;
+  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,dpr_auto,c_fill,g_auto/${opts}/${id}`;
+
+export const cldHero = (id, w = 1600) => BASE(id, `ar_16:9,w_${w},q_auto:good`);
 
 export const cldThumb = (id, w = 160) => BASE(id, `w_${w},h_${w},q_auto:low`);
 
 export const cldDetail = (id, w = 1200) =>
   BASE(id, `w_${w},ar_4:3,q_auto:good`);
 
-export const cldCard = (id, w = 360) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_4:3,w_${w}/${id}`;
+export const cldCard = (id, w = 360) => BASE(id, `ar_4:3,w_${w}`);
 
 export const cldCardSrcSet = (id) => `
 ${cldCard(id, 240)} 240w,
@@ -21,10 +20,10 @@ ${cldCard(id, 640)} 640w
 `;
 
 export const cldHeroSrcSet = (id) => `
-${cldHero(id, 800)} 800w,
-${cldHero(id, 1200)} 1200w,
-${cldHero(id, 1600)} 1600w,
-${cldHero(id, 2000)} 2000w
+${cldHero(id, 640)} 640w,
+${cldHero(id, 960)} 960w,
+${cldHero(id, 1280)} 1280w,
+${cldHero(id, 1600)} 1600w
 `;
 
 export const cldThumbSrcSet = (id) => `
