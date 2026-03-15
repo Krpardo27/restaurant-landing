@@ -1,13 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-CL">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Pizzería Italiana | Pizzas artesanales</title>
+
     <meta
       name="description"
       content="Pizzería artesanal con ingredientes frescos y recetas italianas auténticas. Descubre nuestras pizzas y pide fácilmente por WhatsApp."
     />
+
+    <!-- SEO base -->
+    <meta
+      name="keywords"
+      content="pizza italiana, pizzería artesanal, pizza napolitana, pizzas a domicilio, pizza chile"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Pizzería Italiana" />
+    <meta name="publisher" content="Pizzería Italiana" />
+
+    <!-- canonical base -->
+    <link rel="canonical" href="https://restaurant-landing-one.vercel.app/" />
+
+    <!-- OpenGraph -->
     <meta property="og:title" content="Pizzería Artesanal 🍕" />
     <meta
       property="og:description"
@@ -15,38 +32,33 @@
     />
     <meta property="og:type" content="website" />
     <meta
+      property="og:url"
+      content="https://restaurant-landing-one.vercel.app/"
+    />
+    <meta
       property="og:image"
       content="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,w_1200/pizzas/hero-1_wpoo1v"
     />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      />
-    </noscript>
+
+    <!-- LCP preload -->
     <link
       rel="preload"
       as="image"
       href="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_1280/pizzas/hero-1_wpoo1v"
       imagesrcset="
-https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_640/pizzas/hero-1_wpoo1v 640w,
-https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_960/pizzas/hero-1_wpoo1v 960w,
-https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_1280/pizzas/hero-1_wpoo1v 1280w
-"
+      https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_640/pizzas/hero-1_wpoo1v 640w,
+      https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_960/pizzas/hero-1_wpoo1v 960w,
+      https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_1280/pizzas/hero-1_wpoo1v 1280w
+    "
       imagesizes="100vw"
     />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <div id="root"></div>

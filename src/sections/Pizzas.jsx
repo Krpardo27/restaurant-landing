@@ -75,7 +75,7 @@ const Pizzas = () => {
                     loading="lazy"
                     decoding="async"
                     fetchPriority="low"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
                   />
 
                   {/* Badge */}
