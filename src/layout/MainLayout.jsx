@@ -15,7 +15,7 @@ const MainLayout = () => {
       <Header simple={isPizzaDetail} />
 
       <main
-        className={`min-h-screen ${isPizzaDetail ? "pt-24 bg-zinc-950 text-white" : ""}`}
+        className="min-h-screen"
       >
         <Outlet />
       </main>

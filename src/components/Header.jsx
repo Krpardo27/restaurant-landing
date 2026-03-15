@@ -43,7 +43,7 @@ const Header = () => {
                 PIZZERÍA <span className="text-red-500">NOVA</span>
               </span>
               <span className="text-[11px] text-zinc-400 italic">
-                Pizzería y sabores de Italia 🇮🇹
+                Pizzería y sabores de Italia
               </span>
             </Link>
           </motion.div>

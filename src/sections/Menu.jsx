@@ -31,23 +31,29 @@ const formatIngredients = (ingredients, limit = 3) => {
   return ingredients.slice(0, limit).join(" · ") + "…";
 };
 
-const Menu = () => {
+const Menu = ({ hideHeader = false }) => {
   return (
-    <section id="menu" className="lg:py-28 py-14 bg-zinc-950 text-white">
+    <section
+      id="menu"
+      className={`bg-zinc-950 text-white ${hideHeader ? "py-10" : "lg:py-28 py-14"}`}
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
-        <header className="mb-20 max-w-2xl">
-          <h2 className="font-serif text-4xl md:text-5xl text-red-500 mb-3">
-            Nuestro menú 🍕
-          </h2>
-          <p className="text-zinc-400 text-lg">
-            Pizzas artesanales con masa de fermentación lenta, ingredientes
-            frescos y recetas tradicionales.
-            <span className="block italic text-red-500 mt-1">
-              Pizzería y sabores de Italia 🇮🇹
-            </span>
-          </p>
-        </header>
+        {!hideHeader && (
+          <header className="mb-20 max-w-2xl">
+            <h2 className="font-serif text-4xl md:text-5xl text-red-500 mb-3">
+              Nuestro menú 🍕
+            </h2>
+
+            <p className="text-zinc-400 text-lg">
+              Pizzas artesanales con masa de fermentación lenta, ingredientes
+              frescos y recetas tradicionales.
+              <span className="block italic text-red-500 mt-1">
+                Pizzería y sabores de Italia
+              </span>
+            </p>
+          </header>
+        )}
 
         {/* CATEGORÍAS */}
         {categories.map((category) => {
