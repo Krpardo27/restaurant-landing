@@ -24,28 +24,26 @@ const PizzaDetail = () => {
   const waLink = `https://wa.me/${PHONE}?text=Hola,%20quiero%20la%20pizza%20${pizza.name}`;
 
   return (
-    <section className="min-h-[calc(100vh-72px)] py-16 bg-zinc-950 text-white">
+    <section className="min-h-[calc(100vh-72px)] lg:py-16 bg-zinc-950 text-white">
       <motion.div
         variants={pageFadeUp}
-        initial="hidden"
-        animate="visible"
-        className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center my-20"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center lg:py-20 py-10"
       >
         {/* Imagen */}
         <div className="relative group">
           <img
-            src={cldDetail(pizza.image, 800)}
+            src={cldDetail(pizza.image, 1200)}
             srcSet={cldDetailSrcSet(pizza.image)}
-            sizes="
-    (max-width:1024px) 95vw,
-    560px
-  "
+            sizes="(max-width:1024px) 95vw, 560px"
+            width="1200"
+            height="900"
             alt={`Pizza artesanal ${pizza.name}`}
             loading="lazy"
             decoding="async"
             className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
           />
-
           {/* Badge artesanal */}
           <span className="absolute top-4 left-4 bg-red-600 text-sm px-3 py-1 rounded-full shadow">
             🍕 Artesanal

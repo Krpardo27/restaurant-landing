@@ -3,8 +3,9 @@ import MainLayout from "./layout/MainLayout";
 
 import Home from "./views/Home";
 import { lazy, Suspense } from "react";
+import PizzaLoader from "./components/PizzaLoader";
 
-const PizzaDetail = lazy(() => import("./views/PizzaDetail"));
+const PizzaDetail = lazy(() => import("./views/PizzaDetail.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
       {
         path: "pizza/:slug",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<PizzaLoader />}>
             <PizzaDetail />
           </Suspense>
         ),

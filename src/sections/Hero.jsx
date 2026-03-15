@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import { cldHero, cldHeroSrcSet } from "../utils/cloudinary";
 
 const heroImage = "pizzas/hero-1_wpoo1v";
@@ -10,20 +9,20 @@ const Hero = () => {
       className="relative w-full min-h-[100svh] lg:min-h-[800px] flex items-center justify-center overflow-hidden"
     >
       <img
-        src={cldHero(heroImage, 1600)}
-        srcSet={cldHeroSrcSet(heroImage)}
         sizes="100vw"
         loading="eager"
         fetchPriority="high"
         decoding="async"
+        width="1600"
+        height="900"
         alt="Pizzas artesanales recién horneadas"
         className="absolute inset-0 w-full h-full object-cover"
+        src={cldHero(heroImage, 1600)}
+        srcSet={cldHeroSrcSet(heroImage)}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
-      {/* Texto */}
       <div className="relative z-10 text-center px-6 max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
           Pizzas artesanales hechas con pasión 🍕

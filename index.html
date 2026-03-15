@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pizzería Artesanal 🍕</title>
+
     <meta property="og:title" content="Pizzería Artesanal 🍕" />
     <meta
       property="og:description"
@@ -10,33 +15,47 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto,w_1200/pizzas/hero-1"
+      content="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,w_1200/pizzas/hero-1_wpoo1v"
     />
-    <!-- PRECONNECT -->
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- SOLO UNA FUENTE -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
-    <meta property="og:type" content="website" />
-    <link rel="preload" href="./src/index.css" as="style" />
-    <link rel="stylesheet" href="./src/index.css" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      />
+    </noscript>
+
     <link
       rel="preload"
       as="image"
-      href="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_1280/pizzas/hero-1_wpoo1v"
-      imagesrcset="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_640/pizzas/hero-1_wpoo1v 640w, https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_960/pizzas/hero-1_wpoo1v 960w, https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:good,w_1280/pizzas/hero-1_wpoo1v 1280w"
+      href="https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_1280/pizzas/hero-1_wpoo1v"
+      imagesrcset="
+https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_640/pizzas/hero-1_wpoo1v 640w,
+https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_960/pizzas/hero-1_wpoo1v 960w,
+https://res.cloudinary.com/dy651pevq/image/upload/f_auto,q_auto:eco,dpr_auto,c_fill,g_auto,ar_16:9,w_1280/pizzas/hero-1_wpoo1v 1280w
+"
       imagesizes="100vw"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizzería Artesanal 🍕</title>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <script type="module" src="/src/main.jsx" fetchpriority="low"></script>
   </body>
 </html>
