@@ -28,14 +28,18 @@ const PizzaDetail = () => {
     <>
       <Helmet>
         <title>{pizza.name} | Pizzería Italiana</title>
+
         <meta
           name="description"
           content={`Descubre nuestra pizza ${pizza.name}. ${pizza.description}`}
         />
-         <link
+
+        <link
           rel="canonical"
           href={`https://tu-dominio.cl/pizza/${pizza.slug}`}
         />
+
+        {/* Open Graph */}
         <meta property="og:title" content={`${pizza.name} | Pizzería`} />
         <meta property="og:description" content={pizza.description} />
         <meta property="og:type" content="website" />
@@ -44,6 +48,9 @@ const PizzaDetail = () => {
           property="og:url"
           content={`https://tu-dominio.cl/pizza/${pizza.slug}`}
         />
+
+        {/* Preload LCP image */}
+        <link rel="preload" as="image" href={cldDetail(pizza.image, 1200)} />
       </Helmet>
 
       <section className="min-h-[calc(100vh-72px)] lg:py-16 bg-zinc-950 text-white">
@@ -62,10 +69,12 @@ const PizzaDetail = () => {
               width="1200"
               height="900"
               alt={`Pizza artesanal ${pizza.name}`}
-              loading="lazy"
-              decoding="async"
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
               className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
             />
+
             {/* Badge artesanal */}
             <span className="absolute top-4 left-4 bg-red-600 text-sm px-3 py-1 rounded-full shadow">
               🍕 Artesanal
