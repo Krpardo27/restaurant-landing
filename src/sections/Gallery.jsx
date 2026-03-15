@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 import { galleryImages } from "../data";
 
 import "../styles.css";
@@ -53,10 +52,12 @@ const Gallery = () => {
                   src={cldGallery(item.image, 1200)}
                   srcSet={cldGallerySrcSet(item.image)}
                   sizes="(max-width:1024px) 95vw, 50vw"
+                  width="1200"
+                  height="420"
                   alt={item.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[420px] object-cover rounded-3xl"
                 />
               </SwiperSlide>
             ))}
@@ -71,6 +72,8 @@ const Gallery = () => {
               src={cldGallery(item.image, 800)}
               srcSet={cldGallerySrcSet(item.image)}
               sizes="45vw"
+              width="800"
+              height="600"
               alt={item.alt}
               loading="lazy"
               decoding="async"

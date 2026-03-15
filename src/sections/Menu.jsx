@@ -89,6 +89,8 @@ const Menu = () => {
                         src={cldThumb(pizza.image, 160)}
                         srcSet={cldThumbSrcSet(pizza.image)}
                         sizes="80px"
+                        width="80"
+                        height="80"
                         alt={`Pizza artesanal ${pizza.name}`}
                         loading="lazy"
                         decoding="async"
@@ -98,7 +100,6 @@ const Menu = () => {
     group-hover:scale-105 transition
   "
                       />
-
                       <div className="flex-1">
                         {/* Nombre + línea + precio */}
                         <div className="flex items-baseline gap-4">
