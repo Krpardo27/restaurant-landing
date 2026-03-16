@@ -91,15 +91,18 @@ const PizzaDetail = () => {
         <meta name="theme-color" content="#000000" />
       </Helmet>
 
-      <section className="min-h-[calc(100vh-72px)] lg:py-16 bg-zinc-950 text-white">
+      <section className="bg-zinc-950 text-white py-28 lg:py-36">
         <LazyMotion features={domAnimation}>
           <m.div
             variants={pageFadeUp}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center lg:py-20 py-10"
+            className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-start"
           >
             <div className="relative group">
+              <div className="absolute inset-0 -z-10 flex justify-center">
+                <div className="w-[70%] h-40 bg-red-500/20 blur-3xl rounded-full" />
+              </div>
               <img
                 src={cldDetail(pizza.image, 1200)}
                 srcSet={cldDetailSrcSet(pizza.image)}
