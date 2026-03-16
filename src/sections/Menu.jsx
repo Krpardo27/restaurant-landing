@@ -87,10 +87,9 @@ const Menu = ({ hideHeader = false }) => {
                       variants={item}
                       className="
                         group flex gap-4 items-start
-                        border-b border-white/5 pb-6
+                        border-b border-white/20 pb-6
                       "
                     >
-                      {/* FOTO MINI */}
                       <img
                         src={cldThumb(pizza.image, 160)}
                         srcSet={cldThumbSrcSet(pizza.image)}
@@ -127,7 +126,7 @@ const Menu = ({ hideHeader = false }) => {
                             )}
                           </h4>
 
-                          <span className="flex-1 border-b border-dotted border-white/20 translate-y-[-4px]" />
+                          <span className="flex-1 border-b border-dotted border-white/30 translate-y-[-4px]" />
 
                           <span className="text-red-500 font-bold">
                             {pizza.price}
@@ -147,7 +146,7 @@ const Menu = ({ hideHeader = false }) => {
                         )}
 
                         {/* BOTONES */}
-                        <div className="flex gap-4 mt-3">
+                        <div className="flex gap-4 mt-3 items-center justify-between lg:justify-start">
                           <Link
                             to={`/pizza/${pizza.slug}`}
                             className="
@@ -165,7 +164,7 @@ const Menu = ({ hideHeader = false }) => {
                             className="
                               bg-green-700 hover:bg-green-800
     text-white font-semibold
-    px-6 py-3 rounded-xl
+    px-4 py-2 rounded-xl
     shadow-lg transition
                             "
                           >
