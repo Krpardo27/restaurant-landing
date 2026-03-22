@@ -4,10 +4,29 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ef4444 #18181b;
 }
 
 #pizzas {
   scroll-margin-top: 80px;
 }
 
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
+html::-webkit-scrollbar-track {
+  background: #18181b;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
