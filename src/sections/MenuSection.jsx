@@ -75,7 +75,7 @@ const MenuSection = ({ type, mesa, onSelectItem, hideHeader = false }) => {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         {!hideHeader && (
-          <header className="mb-20 max-w-2xl">
+          <header className="py-12 max-w-2xl">
             <h2 className="font-serif text-4xl md:text-5xl text-red-500 mb-3">
               {titles[type]}
             </h2>
