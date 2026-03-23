@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 
 import Pizzas from "../sections/Pizzas";
-import Menu from "../sections/Menu";
 import About from "../sections/About";
 import Hero from "../sections/Hero";
 import HeroSlider from "../components/HeroSlider";
@@ -13,10 +12,8 @@ const Home = () => {
     <>
       <Hero />
       <Pizzas />
-      <Menu />
-      <HeroSlider />
       <About />
-
+      <HeroSlider />
       <Suspense fallback={null}>
         <Gallery />
       </Suspense>

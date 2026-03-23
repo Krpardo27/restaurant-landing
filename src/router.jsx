@@ -1,10 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+import { lazy, Suspense } from "react";
+
 import MainLayout from "./layout/MainLayout";
+import QRLayout from "./layout/QRLayout";
 
 import Home from "./views/Home";
-import { lazy, Suspense } from "react";
+import MenuQR from "./views/MenuQR";
+import MesasQR from "./views/MesasQR";
+
 import PizzaLoader from "./components/PizzaLoader";
-import MenuQR from "./views/MenuQR.jsx";
 
 const PizzaDetail = lazy(() => import("./views/PizzaDetail.jsx"));
 
@@ -21,15 +25,26 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+    ],
+  },
+  {
+    path: "/menu",
+    element: <QRLayout />,
+    children: [
+      { index: true, element: <MenuQR /> },
       {
-        path: "menu",
+        path: "pizza/:slug",
         element: (
           <Suspense fallback={<PizzaLoader />}>
-            <MenuQR />
+            <PizzaDetail />
           </Suspense>
         ),
       },
     ],
+  },
+  {
+    path: "/admin/mesas",
+    element: <MesasQR />,
   },
 ]);
 

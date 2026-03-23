@@ -10,6 +10,7 @@ const PHONE = "56912345678";
 const Pizzas = () => {
   const [loadingSlug, setLoadingSlug] = useState(null);
   const navigate = useNavigate();
+  
 
   if (loadingSlug) {
     return <PizzaLoader />;

@@ -20,7 +20,7 @@ export default {
         muted: "#9ca3af", // texto secundario
       },
       fontFamily: {
-        serif: ['Inter', 'sans-serif'],
+        serif: ["Inter", "sans-serif"],
       },
       screens: {
         xs: "420px",
