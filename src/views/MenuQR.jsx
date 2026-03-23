@@ -70,9 +70,16 @@ const MenuQR = () => {
 
     // 🔥 SCROLL AL CONTENIDO (LA CLAVE)
     setTimeout(() => {
-      contentRef.current?.scrollIntoView({
+      const tabsHeight = tabsRef.current?.offsetHeight || 0;
+      const y =
+        contentRef.current.getBoundingClientRect().top +
+        window.scrollY -
+        tabsHeight -
+        8; // pequeño margen
+
+      window.scrollTo({
+        top: y,
         behavior: "smooth",
-        block: "start",
       });
     }, 50);
   };
