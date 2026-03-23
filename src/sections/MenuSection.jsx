@@ -69,7 +69,7 @@ const MenuSection = ({ type, mesa, onSelectItem, hideHeader = false }) => {
   return (
     <section
       className={`bg-zinc-950 text-white ${
-        hideHeader ? "py-10" : "lg:py-28 py-14"
+        hideHeader ? "py-10" : "lg:py-28"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
