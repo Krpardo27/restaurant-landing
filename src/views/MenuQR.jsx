@@ -137,7 +137,7 @@ const MenuQR = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div
             ref={tabsRef}
-            className="flex gap-2 overflow-x-auto no-scrollbar py-3"
+            className="flex gap-2 overflow-x-auto no-scrollbar py-5"
           >
             {MENU_CATEGORIES.map((cat, i) => {
               const isActive = category === cat.key;
