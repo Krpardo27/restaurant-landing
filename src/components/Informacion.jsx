@@ -1,31 +1,39 @@
-import React from "react";
-
-const PHONE = "56912345678";
+import { Link } from "react-router-dom";
+import { IoRestaurantOutline } from "react-icons/io5";
 
 const Informacion = () => {
-  const waLink = `https://wa.me/${PHONE}?text=Hola,%20quiero%20hacer%20una%20reserva`;
-
   return (
-    <div className="flex items-center gap-2 justify-between">
+    <div className="flex items-center justify-between gap-3">
       {/* INFO RESTAURANTE */}
       <span className="text-xs text-zinc-400 hidden xl:block">
         📍 Maipú Centro · ⏰ 13:00–23:30
       </span>
 
-      {/* CTA WHATSAPP */}
-      <a
-        href={waLink}
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* CTA MENÚ */}
+      <Link
+        to="/menu"
         className="
-            bg-green-700 hover:bg-green-800
-    text-white font-semibold
-    px-6 py-3 rounded-xl
-    shadow-lg transition
-          "
+          group hidden lg:inline-flex items-center gap-2
+          text-sm font-medium
+
+          px-4 py-2 rounded-xl
+          border border-zinc-200
+
+          text-zinc-700
+          bg-white
+
+          transition-all duration-200
+          hover:bg-red-500 hover:text-white hover:border-red-500
+          active:scale-95
+        "
       >
-        📲 Reservar
-      </a>
+        <IoRestaurantOutline
+          size={18}
+          className="transition-transform duration-200 group-hover:scale-110"
+        />
+
+        <span className="tracking-tight">Ver menú</span>
+      </Link>
     </div>
   );
 };

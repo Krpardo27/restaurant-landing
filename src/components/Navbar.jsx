@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "Inicio", to: "home" },
-  { label: "Menú", to: "menu" },
   { label: "Nosotros", to: "about" },
   { label: "Galería", to: "gallery" },
 ];

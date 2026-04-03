@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useMemo, useRef } from "react";
 
 import MenuSection from "../sections/MenuSection";
@@ -110,7 +110,6 @@ const MenuQR = () => {
 
   return (
     <div className="text-white">
-      {/* Mesa flotante */}
       {mesa && (
         <div className="fixed top-20 right-4 z-50 bg-red-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold">
           🍕 Mesa {mesa}
@@ -118,33 +117,64 @@ const MenuQR = () => {
       )}
 
       {/* HEADER */}
-      <div className="max-w-3xl mx-auto px-6 mb-10 text-center">
-        <div className="inline-block px-4 py-1 mb-4 rounded-full bg-red-500/10 text-red-400 text-sm">
-          Menú Digital
+      <div className="max-w-3xl mx-auto px-6 mb-12 text-center">
+        <div className="flex items-center justify-between mb-6 gap-4">
+          {/* TAG */}
+          <span
+            className="
+      inline-flex items-center gap-2
+      px-5 py-2.5 rounded-full
+      bg-red-500/15 text-red-300
+      text-xs font-medium
+      border border-red-500/20
+      whitespace-nowrap
+    "
+          >
+            🍕 Menú Digital
+          </span>
+
+          {/* CTA */}
+          <Link
+            to="/"
+            className="
+    inline-flex items-center justify-center
+    px-5 py-2.5
+    rounded-xl
+
+    bg-red-500 hover:bg-red-600
+    text-white font-semibold text-sm
+
+    shadow-md hover:shadow-lg
+    transition-all duration-200
+    active:scale-[0.97]
+  "
+          >
+             Visita nuestra web
+          </Link>
         </div>
 
-        <h1 className="font-serif text-4xl md:text-5xl text-red-500 mb-4">
+        <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
           🍕 Nuestro Menú
         </h1>
 
-        <p className="text-zinc-400 text-lg">
+        <p className="text-zinc-300 text-lg">
           Pizzas artesanales con ingredientes frescos y masa de fermentación
           lenta.
         </p>
 
         {mesa && (
-          <p className="mt-3 text-sm text-zinc-500">
+          <p className="mt-3 text-sm text-zinc-400">
             Mesa <span className="text-red-400 font-semibold">{mesa}</span>
           </p>
         )}
       </div>
 
       {/* TABS */}
-      <div className="sticky top-0 z-40 bg-zinc-950/90 backdrop-blur border-b border-zinc-800 shadow-md shadow-black/20">
+      <div className="sticky top-0 z-40 bg-zinc-950/95 backdrop-blur border-b border-zinc-800">
         <div className="max-w-6xl mx-auto px-4">
           <div
             ref={tabsRef}
-            className="flex gap-2 overflow-x-auto no-scrollbar py-5"
+            className="flex gap-3 overflow-x-auto no-scrollbar py-4"
           >
             {MENU_CATEGORIES.map((cat, i) => {
               const isActive = category === cat.key;
@@ -154,25 +184,17 @@ const MenuQR = () => {
                   key={cat.key}
                   onClick={() => handleCategoryChange(cat.key, i)}
                   className={`
-        relative whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium
-        flex items-center gap-2 transition-all duration-300
-        ${
-          isActive
-            ? "bg-red-500 text-white scale-105"
-            : "bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800"
-        }
-      `}
+              whitespace-nowrap px-4 py-2.5 rounded-full text-sm font-medium
+              flex items-center gap-2 transition-all duration-200
+              ${
+                isActive
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-zinc-800 text-zinc-200 hover:bg-zinc-700"
+              }
+            `}
                 >
-                  {icons[cat.key] && <span>{icons[cat.key]}</span>}
+                  <span className="text-base">{icons[cat.key]}</span>
                   {cat.label}
-
-                  <span
-                    className={`
-          absolute bottom-0 left-1/2 -translate-x-1/2
-          h-[2px] bg-red-400 transition-all duration-300
-          ${isActive ? "w-1/2" : "w-0"}
-        `}
-                  />
                 </button>
               );
             })}
@@ -197,22 +219,23 @@ const MenuQR = () => {
       </div>
 
       {/* CTA */}
-      <div className="max-w-4xl mx-auto px-6 mt-20 mb-10">
+      {/* <div className="max-w-4xl mx-auto px-6 mt-20 mb-10">
         <a
           href={waLink}
           target="_blank"
           rel="noopener noreferrer"
           className="
-            flex items-center justify-center gap-2
-            bg-green-600 hover:bg-green-700
-            text-white font-semibold
-            py-4 rounded-xl shadow-xl
-            transition-colors duration-300
-          "
+      flex items-center justify-center gap-3
+      bg-green-500 hover:bg-green-600
+      text-white font-semibold text-lg
+      py-4 rounded-2xl shadow-xl
+      transition-all duration-200
+      active:scale-95
+    "
         >
           📲 Pedir por WhatsApp
         </a>
-      </div>
+      </div> */}
 
       {/* MODAL */}
       <PizzaDetailModal

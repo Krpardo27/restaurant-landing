@@ -65,6 +65,49 @@ export const MENU_CATEGORIES = [
   { label: "Peri Bambini", key: "bambini" },
 ];
 
+export const CATEGORY_META = {
+  pizzas: {
+    title: "Pizzas 🍕",
+    description:
+      "Pizzas artesanales con masa de fermentación lenta e ingredientes frescos.",
+  },
+  antipasti: {
+    title: "Antipasti 🧀",
+    description:
+      "Entradas italianas perfectas para comenzar tu experiencia.",
+  },
+  pastas: {
+    title: "Pastas 🍝",
+    description:
+      "Pastas frescas con recetas tradicionales italianas.",
+  },
+  risottos: {
+    title: "Risottos 🍚",
+    description:
+      "Cremosos risottos preparados al estilo clásico italiano.",
+  },
+  postres: {
+    title: "Postres 🍰",
+    description:
+      "El final perfecto con dulces irresistibles.",
+  },
+  bebidas: {
+    title: "Bebidas 🥤",
+    description:
+      "Refrescos y acompañamientos para tu comida.",
+  },
+  adicionales: {
+    title: "Adicionales ➕",
+    description:
+      "Complementos para personalizar tu pedido.",
+  },
+  bambini: {
+    title: "Peri Bambini 👶",
+    description:
+      "Opciones pensadas especialmente para los más pequeños.",
+  },
+};
+
 // PIZZAS - Convertidas a string IDs
 export const pizzas = [
   {
