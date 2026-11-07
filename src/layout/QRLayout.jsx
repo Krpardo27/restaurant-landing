@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
+import ScrollToTopSmooth from "../components/ScrollToTopSmooth";
 
 const QRLayout = () => {
   return (
-    <div className="bg-zinc-950">
-      <main className="min-h-screen max-w-3xl mx-auto py-8">
+    <div className="min-h-screen bg-zinc-950 text-white">
+      <ScrollToTopSmooth />
+      <main id="main-content" className="min-h-screen">
         <Outlet />
       </main>
     </div>

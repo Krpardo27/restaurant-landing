@@ -1,98 +1,61 @@
+import { Link } from "react-router-dom";
+import { galleryImages } from "../data";
+import { cldGallery, cldGallerySrcSet } from "../utils/cloudinary";
+import { imageFallback } from "../utils/imageFallback";
+import "../styles/home-story.css";
+
+const storyImage = galleryImages[1];
+
 const About = () => {
   return (
-    <section
-      id="about"
-      className="
-        bg-[#161616]
-        lg:py-28 
-        py-12
-      "
-    >
-      <div className="container mx-auto px-6 max-w-7xl">
-        {/* Header */}
-        <header className="max-w-3xl mb-20">
-          <h2 className="font-serif text-3xl md:text-5xl mb-6 text-accent">
-            Nuestra historia
+    <section id="about" className="home-section story-section" aria-labelledby="story-title">
+      <div className="home-container story-layout">
+        <figure className="story-figure">
+          <div className="story-image-frame">
+            <img
+              src={cldGallery(storyImage.image, 800)}
+              srcSet={cldGallerySrcSet(storyImage.image)}
+              sizes="(min-width: 1248px) 540px, (min-width: 900px) 44vw, calc(100vw - 48px)"
+              width="800"
+              height="600"
+              alt={storyImage.alt}
+              loading="lazy"
+              decoding="async"
+              onError={imageFallback}
+            />
+          </div>
+          <figcaption>Tradición italiana. Espíritu local.</figcaption>
+        </figure>
+
+        <div className="story-content">
+          <p className="home-eyebrow">Nuestra historia</p>
+          <h2 id="story-title" className="home-title story-title">
+            El buen sabor lleva su tiempo.
           </h2>
-
-          <p className="text-muted text-lg leading-relaxed">
-            Creemos que una buena pizza no necesita presentación, solo tiempo,
-            respeto por los ingredientes y pasión por el oficio.
+          <p className="home-description story-intro">
+            PIZZANOVA nació en Chile para volver a lo esencial: masa de
+            fermentación lenta, ingredientes frescos y el oficio de hacer pizza.
+            Raíces italianas, carácter local.
           </p>
-        </header>
 
-        {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          {/* Historia */}
-          <div className="space-y-6 text-muted leading-relaxed text-base md:text-lg">
-            <p>
-              PIZZA<span className="text-accent">NOVA</span> nació en Chile con
-              una idea simple: volver a la esencia de la pizza artesanal. Masa
-              de fermentación lenta, horno de alta temperatura y recetas que
-              respetan la tradición italiana, adaptadas al carácter local.
-            </p>
-
-            <p>
-              Después de años probando masas, tiempos y combinaciones,
-              entendimos que la diferencia no está en hacer más, sino en hacer
-              mejor. Cada pizza que sale de nuestro horno es el resultado de
-              procesos cuidados, ingredientes frescos y decisiones conscientes.
-            </p>
-
-            <p>
-              No buscamos ser la pizzería más rápida ni la más grande. Queremos
-              ser esa a la que vuelves porque recuerdas exactamente cómo sabía.
-            </p>
-          </div>
-
-          {/* Valores */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white relative pl-4">
-                <span className="absolute left-0 top-1.5 h-4 w-[2px] bg-accent" />
-                Masa con carácter
-              </h3>
-
-              <p className="text-muted text-sm leading-relaxed">
-                Fermentación lenta de más de 48 horas, harina seleccionada y
-                técnica precisa para lograr una base ligera, aireada y
-                crujiente.
-              </p>
+          <dl className="story-values">
+            <div className="story-value">
+              <dt>Masa</dt>
+              <dd>Más de 48 horas de fermentación para una base ligera y bordes con carácter.</dd>
             </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white relative pl-4">
-                <span className="absolute left-0 top-1.5 h-4 w-[2px] bg-accent" />
-                Ingredientes reales
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                Trabajamos con productos frescos, proveedores locales y quesos
-                de calidad. Nada innecesario, nada artificial.
-              </p>
+            <div className="story-value">
+              <dt>Ingredientes</dt>
+              <dd>Productos frescos y quesos seleccionados. Cada ingrediente tiene su lugar.</dd>
             </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white relative pl-4">
-                <span className="absolute left-0 top-1.5 h-4 w-[2px] bg-accent" />
-                Horno a alta temperatura
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                El calor correcto marca la diferencia. Nuestro horno permite una
-                cocción rápida que sella sabores y respeta la textura.
-              </p>
+            <div className="story-value">
+              <dt>Horno</dt>
+              <dd>Alta temperatura para cuidar la textura y concentrar el sabor de cada receta.</dd>
             </div>
+          </dl>
 
-            <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white relative pl-4">
-                <span className="absolute left-0 top-1.5 h-4 w-[2px] bg-accent" />
-                Hecho en Chile
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                Inspirados en Italia, creados en Chile. Cada receta tiene
-                identidad, carácter y un toque local que nos representa.
-              </p>
-            </div>
-          </div>
+          <Link to="/menu" className="home-button home-button-outline story-menu-link">
+            Explorar el menú
+          </Link>
         </div>
       </div>
     </section>

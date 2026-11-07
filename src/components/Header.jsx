@@ -1,73 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import MobileMenu from "./MobileMenu";
 import Informacion from "./Informacion";
+import Brand from "./Brand";
+import HeaderBar from "./HeaderBar";
+import { FiArrowLeft, FiMenu } from "react-icons/fi";
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+const Header = ({ simple = false }) => {
+  const location = useLocation();
+  const [menuKey, setMenuKey] = useState(null);
+  const open = menuKey === location.key;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const media = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (media.matches) setMenuKey(null);
+    };
+    media.addEventListener("change", closeOnDesktop);
+    return () => media.removeEventListener("change", closeOnDesktop);
   }, []);
 
   return (
     <>
-      <header
-        className={`
-          fixed top-0 inset-x-0 z-50 border-b
-          ${
-            scrolled
-              ? "bg-zinc-950 border-red-500/20 shadow-lg"
-              : "bg-zinc-950/70 backdrop-blur-md border-white/5"
-          }
-        `}
-      >
-        <motion.div
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="max-w-7xl mx-auto px-6 flex items-center justify-between"
-          style={{
-            paddingTop: scrolled ? 10 : 16,
-            paddingBottom: scrolled ? 10 : 16,
-          }}
-        >
-          {/* LOGO + SLOGAN */}
-          <motion.div animate={{ scale: scrolled ? 0.95 : 1 }}>
-            <Link to="/" className="flex flex-col leading-tight">
-              <span className="text-xl font-serif text-white tracking-wide">
-                PIZZERÍA <span className="text-red-500">NOVA</span>
-              </span>
-              <span className="text-[11px] text-zinc-400 italic">
-                Pizzería y sabores de Italia
-              </span>
-            </Link>
-          </motion.div>
-
-          {/* NAV */}
-          <Navbar scrolled={scrolled} />
-
-          <Informacion />
-
-          <button
-            onClick={() => setOpen(true)}
-            className="lg:hidden text-white"
-            aria-label="Abrir menú"
-          >
-            <div className="space-y-1.5">
-              <span className="block w-6 h-[2px] bg-white" />
-              <span className="block w-6 h-[2px] bg-white" />
-              <span className="block w-6 h-[2px] bg-white" />
-            </div>
-          </button>
-        </motion.div>
-      </header>
-
-      <MobileMenu open={open} onClose={() => setOpen(false)} />
+      <HeaderBar id="site-header" fixed className="home-header">
+          <Brand to="/#home" />
+          {!simple && <Navbar />}
+          <div className="home-header-actions">
+            {simple && <Link to="/#pizzas" className="home-header-back"><FiArrowLeft aria-hidden="true" /> Todas las pizzas</Link>}
+            <Informacion />
+            <button
+              type="button"
+              onClick={() => setMenuKey(location.key)}
+              className="home-menu-toggle"
+              aria-label="Abrir menú"
+              aria-haspopup="dialog"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+            >
+              <FiMenu aria-hidden="true" />
+            </button>
+          </div>
+      </HeaderBar>
+      <MobileMenu open={open} onClose={() => setMenuKey(null)} />
     </>
   );
 };

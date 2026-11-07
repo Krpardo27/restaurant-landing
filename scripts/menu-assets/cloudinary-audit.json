@@ -1,0 +1,306 @@
+{
+    "checkedAt":  "2026-11-05T19:40:28.1047777Z",
+    "items":  [
+                  {
+                      "id":  "margherita-clasica",
+                      "category":  "pizzas",
+                      "image":  "pizzas/margarita-clasica_w66vv1",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pepperoni-artesanal",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pepperoni-artesanal_iab7ta",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "cuatro-quesos",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-cuatro-quesos_lhkmru",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "prosciutto-rucula",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-rucula_rtysov",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "aceitunas-alcaparras",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-aceitunas_w4gzxc",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "prosciutto-albahaca",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-albaca_veplo6",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pizza-vegana",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-2_agujte",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pizza-vegetariana",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-vegetariana_qdtlqm",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "arancini",
+                      "category":  "antipasti",
+                      "image":  "antipasti/arancini",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "montanara",
+                      "category":  "antipasti",
+                      "image":  "antipasti/montanara",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "bruschetta-mortadella",
+                      "category":  "antipasti",
+                      "image":  "antipasti/bruschetta-mortadella",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "bruschetta-fiorentina",
+                      "category":  "antipasti",
+                      "image":  "antipasti/bruschetta-fiorentina",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "rosticceria",
+                      "category":  "antipasti",
+                      "image":  "antipasti/rosticceria",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "antipasti-tabla",
+                      "category":  "antipasti",
+                      "image":  "antipasti/antipasti-tabla",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gnocchi-sorrentina",
+                      "category":  "pastas",
+                      "image":  "pastas/gnocchi-sorrentina",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gnocchi-pesto",
+                      "category":  "pastas",
+                      "image":  "pastas/gnocchi-pesto",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gnocchi-formaggi",
+                      "category":  "pastas",
+                      "image":  "pastas/gnocchi-quatro-formaggi",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "puttanesca",
+                      "category":  "pastas",
+                      "image":  "pastas/puttanesca",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "carbonara",
+                      "category":  "pastas",
+                      "image":  "pastas/carbonara",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "lasagna",
+                      "category":  "pastas",
+                      "image":  "pastas/lasagna",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "risotto-porcini",
+                      "category":  "risottos",
+                      "image":  "risottos/risotto-porcini",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "angioletti-nutella",
+                      "category":  "postres",
+                      "image":  "postres/angioletti-nutella",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "mini-angioletti-nutella",
+                      "category":  "postres",
+                      "image":  "postres/mini-angioletti-nutella",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "cannoli-alleria",
+                      "category":  "postres",
+                      "image":  "postres/cannoli-alleria",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "cannoli-pistacho",
+                      "category":  "postres",
+                      "image":  "postres/cannoli-pistacho",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "cannoli-mixto",
+                      "category":  "postres",
+                      "image":  "postres/cannoli-mixto",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-frutos-rojos",
+                      "category":  "postres",
+                      "image":  "postres/gelato-frutos-rojos",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-amaretto",
+                      "category":  "postres",
+                      "image":  "postres/gelato-amaretto",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-vainilla",
+                      "category":  "postres",
+                      "image":  "postres/gelato-vainilla",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-pistacho",
+                      "category":  "postres",
+                      "image":  "postres/gelato-pistacho",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-menta",
+                      "category":  "postres",
+                      "image":  "postres/gelato-menta",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "gelato-caramelo",
+                      "category":  "postres",
+                      "image":  "postres/gelato-caramelo",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "tiramisu-clasico",
+                      "category":  "postres",
+                      "image":  "postres/tiramisu-clasico",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "tiramisu-alleria",
+                      "category":  "postres",
+                      "image":  "postres/tiramisu-alleria",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "coca-cola",
+                      "category":  "bebidas",
+                      "image":  "bebidas/coca-cola",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "sprite",
+                      "category":  "bebidas",
+                      "image":  "bebidas/sprite",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "limonada",
+                      "category":  "bebidas",
+                      "image":  "bebidas/limonada",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "jugo-mango",
+                      "category":  "bebidas",
+                      "image":  "bebidas/jugo-mango",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "extra-verdura",
+                      "category":  "adicionales",
+                      "image":  "adicionales/extra-verdura",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "extra-queso",
+                      "category":  "adicionales",
+                      "image":  "adicionales/extra-queso",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "extra-burrata",
+                      "category":  "adicionales",
+                      "image":  "adicionales/extra-burrata",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "sorrentino-kids",
+                      "category":  "bambini",
+                      "image":  "bambini/sorrentino",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  },
+                  {
+                      "id":  "diavoletta-kids",
+                      "category":  "bambini",
+                      "image":  "bambini/diavoletta",
+                      "status":  404,
+                      "contentType":  "application/octet-stream"
+                  }
+              ]
+}

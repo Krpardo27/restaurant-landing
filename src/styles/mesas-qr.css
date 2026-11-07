@@ -1,0 +1,78 @@
+.qr-admin { min-height: 100dvh; background: #11100f; color: #f5f0e8; }
+.qr-admin-container { width: min(1200px, calc(100% - 64px)); margin-inline: auto; padding-block: 42px; }
+.qr-admin-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
+.qr-admin-eyebrow { color: #d5a78d; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.qr-admin-heading h1 { margin-block: 12px; font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); font-weight: 400; line-height: 1.15; }
+.qr-admin-heading > div > p:last-child { max-width: 540px; color: #b8aca0; font-size: 13px; line-height: 1.8; }
+.qr-action { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; gap: 8px; min-height: 44px; padding: 10px 16px; border: 1px solid #75614e; border-radius: 8px; color: inherit; font: inherit; font-size: 12px; line-height: 1.5; text-align: center; transition: background-color .18s; }
+.qr-action:hover:not(:disabled) { background: #ffffff0a; }
+.qr-action:disabled { opacity: .45; cursor: not-allowed; }
+.qr-action-primary { border-color: #f47058; background: #f47058; color: #21140e; }
+.qr-action-primary:hover:not(:disabled) { background: #ff9479; }
+.qr-admin-config { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; padding: 24px; border: 1px solid #ffffff16; border-radius: 14px; background: #1b1917; }
+.qr-admin-config form { min-width: 0; }
+.qr-admin-config label { display: block; font-size: 14px; font-weight: 600; }
+.qr-admin-config form > p { margin-top: 8px; color: #b8aca0; font-size: 12px; line-height: 1.7; }
+.qr-field-action { display: flex; gap: 8px; margin-top: 14px; }
+.qr-field-action input { min-width: 0; flex: 1; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #736352; border-radius: 8px; background: #11100f; color: #f5f0e8; font: inherit; font-size: 13px; }
+.qr-field-action input[aria-invalid="true"] { border-color: #f47058; }
+.qr-config-count input { max-width: 100px; }
+.qr-admin-config .qr-error { color: #ffb19d; }
+.qr-config-note code { color: #e9cdb4; overflow-wrap: anywhere; }
+.qr-admin-notice { margin-top: 20px; padding: 18px 20px; border-left: 2px solid #f47058; background: #f4705809; color: #c7b9aa; font-size: 12px; line-height: 1.8; }
+.qr-admin-notice p + p { margin-top: 8px; color: #a99b8c; }
+.qr-admin-notice strong { color: #f0d8c3; overflow-wrap: anywhere; }
+.qr-admin-status { min-height: 24px; margin-block: 16px; color: #bed2aa; font-size: 12px; line-height: 1.8; }
+.qr-sheet { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 20px; }
+.qr-table { min-width: 0; display: flex; flex-direction: column; align-items: center; padding: 24px 20px 20px; border: 1px solid #dfd6c8; border-radius: 12px; background: #fff; color: #191613; text-align: center; }
+.qr-card-brand { font-size: 24px; font-weight: 700; line-height: 1.15; letter-spacing: .1em; }
+.qr-card-brand > span { color: #b74731; }
+.qr-card-brand small { display: block; margin-top: 5px; color: #605446; font-size: 7px; font-weight: 500; letter-spacing: .22em; }
+.qr-table h2 { margin-block: 20px 10px; font-family: var(--font-display); font-size: 26px; font-weight: 400; }
+.qr-table h2 strong { font-weight: 400; }
+.qr-code { display: grid; place-items: center; width: 100%; }
+.qr-code svg { display: block; max-width: 100%; width: 200px; height: auto; aspect-ratio: 1; }
+.qr-code-placeholder { display: grid; place-items: center; width: 100%; max-width: 200px; min-height: 200px; border: 1px dashed #c6b9a8; border-radius: 8px; padding: 20px; color: #746452; font-size: 12px; line-height: 1.8; }
+.qr-card-prompt { margin-top: 10px; font-size: 12px; line-height: 1.8; }
+.qr-card-domain { max-width: 100%; margin-top: 3px; color: #655849; font-size: 10px; line-height: 1.6; overflow-wrap: anywhere; }
+.qr-card-actions { display: flex; flex-direction: column; align-items: stretch; width: 100%; margin-top: auto; padding-top: 22px; }
+.qr-card-actions .qr-action { border-color: #dbcebc; color: #49372a; }
+.qr-card-actions .qr-action:hover:not(:disabled) { background: #f5f0e8; }
+.qr-card-link { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; margin-top: 5px; color: #77432f; font-size: 11px; }
+.qr-card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.qr-admin-footer { max-width: 740px; margin-top: 28px; color: #a99b8c; font-size: 12px; line-height: 1.8; }
+.qr-print-warning { display: none; }
+
+@media (max-width: 900px) {
+  .qr-admin-config { grid-template-columns: minmax(0, 1fr); }
+  .qr-config-count { padding-top: 22px; border-top: 1px solid #ffffff14; }
+}
+@media (max-width: 640px) {
+  .qr-admin-container { width: calc(100% - 32px); padding-block: 28px; }
+  .qr-admin-heading { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .qr-admin-config { padding: 18px; gap: 22px; }
+  .qr-config-site .qr-field-action { flex-direction: column; }
+  .qr-admin-heading > .qr-action { width: 100%; }
+  .qr-config-count .qr-field-action { flex-wrap: wrap; }
+}
+
+@page qr-tables { size: A4; margin: 12mm; }
+@media print {
+  html:has(.qr-admin), body:has(.qr-admin), body:has(.qr-admin) #root { min-width: 0 !important; margin: 0 !important; padding: 0 !important; background: #fff !important; color: #000 !important; scrollbar-gutter: auto; }
+  .qr-admin { page: qr-tables; min-height: 0; background: #fff; color: #000; }
+  .qr-admin-container { width: 100%; margin: 0; padding: 0; }
+  .qr-admin .qr-screen-only { display: none !important; }
+  .qr-sheet { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8mm; }
+  .qr-table { break-inside: avoid; page-break-inside: avoid; padding: 7mm; border: .3mm solid #aaa; border-radius: 3mm; background: #fff; color: #000; box-shadow: none; }
+  .qr-table h2 { margin: 5mm 0 2mm; font-size: 19pt; }
+  .qr-card-brand { font-size: 18pt; }
+  .qr-card-brand > span, .qr-card-brand small, .qr-card-domain { color: #333; }
+  .qr-card-brand small { font-size: 6pt; }
+  .qr-code svg { width: 50mm; max-width: 100%; height: auto; }
+  .qr-card-prompt { margin-top: 3mm; font-size: 9pt; }
+  .qr-card-domain { font-size: 8pt; }
+  .qr-admin[data-print-mode="single"] .qr-table:not([data-print-selected="true"]) { display: none !important; }
+  .qr-admin[data-print-mode="single"] .qr-sheet { grid-template-columns: minmax(0, 88mm); justify-content: center; }
+  .qr-admin[data-ready="false"] .qr-sheet { display: none !important; }
+  .qr-admin[data-ready="false"] .qr-print-warning { display: block; padding: 10mm; color: #000; font: 14pt sans-serif; }
+}

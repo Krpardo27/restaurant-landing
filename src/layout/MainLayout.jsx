@@ -1,21 +1,23 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useMatch } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTopSmooth from "../components/ScrollToTopSmooth";
+import { FaWhatsapp } from "react-icons/fa";
+import "../styles/landing.css";
 
 const MainLayout = () => {
-  const location = useLocation();
-  const isPizzaDetail = location.pathname.includes("/pizza/");
+  const isPizzaDetail = Boolean(useMatch("/pizza/:slug"));
 
-  const waLink = `https://wa.me/56990914436?text=Hola,%20quiero%20hacer%20una%20reserva`;
+  const waLink = `https://wa.me/56990914436?text=${encodeURIComponent("Hola, quiero hacer un pedido")}`;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="landing-shell">
+      <a href="#main-content" className="skip-link">Saltar al contenido</a>
       <ScrollToTopSmooth />
 
       <Header simple={isPizzaDetail} />
 
-      <main className="flex-1 ">
+      <main id="main-content" tabIndex={-1} className="flex-1">
         <Outlet />
       </main>
 
@@ -25,15 +27,10 @@ const MainLayout = () => {
         href={waLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="
-          fixed bottom-5 right-5 z-10
-          bg-green-700 hover:bg-green-800
-          text-white font-semibold
-          px-6 py-3 rounded-full
-          shadow-lg transition
-        "
+        aria-label="Hacer un pedido por WhatsApp (abre otra pestaña)"
+        className="home-floating-order"
       >
-        📲 Pedir
+        <FaWhatsapp aria-hidden="true" /> <span>Pedir</span>
       </a>
     </div>
   );

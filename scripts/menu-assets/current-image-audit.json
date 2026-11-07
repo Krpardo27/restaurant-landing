@@ -1,0 +1,271 @@
+{
+    "checkedAt":  "2026-11-05T20:12:07.1655224Z",
+    "items":  [
+                  {
+                      "id":  "margherita-clasica",
+                      "category":  "pizzas",
+                      "image":  "pizzas/margarita-clasica_w66vv1",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pepperoni-artesanal",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pepperoni-artesanal_iab7ta",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "cuatro-quesos",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-cuatro-quesos_lhkmru",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "prosciutto-rucula",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-rucula_rtysov",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "aceitunas-alcaparras",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-aceitunas_w4gzxc",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "prosciutto-albahaca",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-albaca_veplo6",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pizza-vegana",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-2_agujte",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "pizza-vegetariana",
+                      "category":  "pizzas",
+                      "image":  "pizzas/pizza-vegetariana_qdtlqm",
+                      "status":  200,
+                      "contentType":  "image/jpeg"
+                  },
+                  {
+                      "id":  "arancini",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/arancini-arroz-ragu.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "montanara",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/pizza-frita-roma.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "bruschetta-mortadella",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/bruschetta-clasica.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "bruschetta-fiorentina",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/bruschetta-setas-cebolla.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "rosticceria",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/crocche-croquetas-papa.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "antipasti-tabla",
+                      "category":  "antipasti",
+                      "image":  "/menu/antipasti/tabla-quesos-fiambres-toscana.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gnocchi-sorrentina",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/gnocchi-sorrentina.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gnocchi-pesto",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/gnocchi-pesto-caseros.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gnocchi-formaggi",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/gnocchi-queso-taleggio-salvia.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "puttanesca",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/spaghetti-puttanesca.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "carbonara",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/espaguetis-carbonara-tradicional.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "lasagna",
+                      "category":  "pastas",
+                      "image":  "/menu/pastas/lasagna-carne.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "risotto-porcini",
+                      "category":  "risottos",
+                      "image":  "/menu/risottos/risotto-porcini.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "angioletti-nutella",
+                      "category":  "postres",
+                      "image":  "/menu/postres/masa-frita-chocolate.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "mini-angioletti-nutella",
+                      "category":  "postres",
+                      "image":  "/menu/postres/masa-frita-chocolate.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "cannoli-alleria",
+                      "category":  "postres",
+                      "image":  "/menu/postres/cannoli-pistacho.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "cannoli-pistacho",
+                      "category":  "postres",
+                      "image":  "/menu/postres/cannoli-pistacho.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "cannoli-mixto",
+                      "category":  "postres",
+                      "image":  "/menu/postres/cannoli-pistacho.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-frutos-rojos",
+                      "category":  "postres",
+                      "image":  "/menu/postres/gelato-fresa-stracciatella.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-amaretto",
+                      "category":  "postres",
+                      "image":  "/menu/postres/helado-frutos-secos-caramelo.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-vainilla",
+                      "category":  "postres",
+                      "image":  "/menu/postres/helado-vainilla.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-pistacho",
+                      "category":  "postres",
+                      "image":  "/menu/postres/helado-pistacho-nougat.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-menta",
+                      "category":  "postres",
+                      "image":  "/menu/postres/helado-menta-chocolate.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "gelato-caramelo",
+                      "category":  "postres",
+                      "image":  "/menu/postres/helado-frutos-secos-caramelo.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "tiramisu-clasico",
+                      "category":  "postres",
+                      "image":  "/menu/postres/tiramisu-porcion-individual.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "tiramisu-alleria",
+                      "category":  "postres",
+                      "image":  "/menu/postres/tiramisu-porcion-individual.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "coca-cola",
+                      "category":  "bebidas",
+                      "image":  "/menu/bebidas/coca-cola-lata-330ml.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "sprite",
+                      "category":  "bebidas",
+                      "image":  "/menu/bebidas/sprite-botella-vidrio.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "limonada",
+                      "category":  "bebidas",
+                      "image":  "/menu/bebidas/limonada-vaso.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "jugo-mango",
+                      "category":  "bebidas",
+                      "image":  "/menu/bebidas/jugo-mango-vasos.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "extra-verdura",
+                      "category":  "adicionales",
+                      "image":  "/menu/adicionales/verduras-pimientos-colores.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "extra-queso",
+                      "category":  "adicionales",
+                      "image":  "/menu/adicionales/queso-parmesano-bloque.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "extra-burrata",
+                      "category":  "adicionales",
+                      "image":  "/menu/adicionales/burrata-fresca.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "sorrentino-kids",
+                      "category":  "bambini",
+                      "image":  "/menu/bambini/espaguetis-salsa-tomate.jpg",
+                      "status":  200
+                  },
+                  {
+                      "id":  "diavoletta-kids",
+                      "category":  "bambini",
+                      "image":  "/menu/bambini/pizza-margarita-bambini.jpg",
+                      "status":  200
+                  }
+              ]
+}

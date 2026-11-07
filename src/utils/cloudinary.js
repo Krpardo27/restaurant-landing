@@ -1,54 +1,38 @@
+import { isLocalImage, localImageSrcSet, resolveLocalImage } from "./menuImageSources.js";
+
 const CLOUD = import.meta.env.VITE_CLOUDINARY_CLOUD;
 
-const BASE = (id, opts) =>
-  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,dpr_auto/${opts}/${id}`;
+const BASE = (id, opts, width) => {
+  if (!id) return "/images/placeholder.svg";
+  return resolveLocalImage(id, width) || `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto:eco,dpr_auto/${opts}/${id}`;
+};
+
+const sourceSet = (id, widths, build) => {
+  if (!id || isLocalImage(id)) return localImageSrcSet(id);
+  return widths.map((width) => `${build(id, width)} ${width}w`).join(", ");
+};
 
 export const cldHero = (id, w = 1600) =>
-  BASE(id, `c_fill,g_auto,ar_16:9,w_${w}`);
+  BASE(id, `c_fill,g_auto,ar_16:9,w_${w}`, w);
 
-export const cldHeroSrcSet = (id) => `
-${cldHero(id, 640)} 640w,
-${cldHero(id, 960)} 960w,
-${cldHero(id, 1280)} 1280w,
-${cldHero(id, 1600)} 1600w
-`;
+export const cldHeroSrcSet = (id) => sourceSet(id, [640, 960, 1280, 1600], cldHero);
 
 export const cldCard = (id, w = 360) =>
-  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`);
+  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`, w);
 
-export const cldCardSrcSet = (id) => `
-${cldCard(id, 240)} 240w,
-${cldCard(id, 320)} 320w,
-${cldCard(id, 480)} 480w,
-${cldCard(id, 640)} 640w
-`;
+export const cldCardSrcSet = (id) => sourceSet(id, [240, 320, 480, 640], cldCard);
 
 export const cldThumb = (id, w = 160) =>
-  BASE(id, `c_fill,g_auto,w_${w},h_${w}`);
+  BASE(id, `c_fill,g_auto,w_${w},h_${w}`, w);
 
-export const cldThumbSrcSet = (id) => `
-${cldThumb(id, 80)} 80w,
-${cldThumb(id, 120)} 120w,
-${cldThumb(id, 160)} 160w,
-${cldThumb(id, 240)} 240w
-`;
+export const cldThumbSrcSet = (id) => sourceSet(id, [80, 120, 160, 240], cldThumb);
 
 export const cldGallery = (id, w = 1200) =>
-  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`);
+  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`, w);
 
-export const cldGallerySrcSet = (id) => `
-${cldGallery(id, 480)} 480w,
-${cldGallery(id, 800)} 800w,
-${cldGallery(id, 1200)} 1200w,
-${cldGallery(id, 1600)} 1600w
-`;
+export const cldGallerySrcSet = (id) => sourceSet(id, [480, 800, 1200, 1600], cldGallery);
 
 export const cldDetail = (id, w = 1200) =>
-  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`);
+  BASE(id, `c_fill,g_auto,ar_4:3,w_${w}`, w);
 
-export const cldDetailSrcSet = (id) => `
-${cldDetail(id, 600)} 600w,
-${cldDetail(id, 900)} 900w,
-${cldDetail(id, 1200)} 1200w,
-${cldDetail(id, 1600)} 1600w
-`;
+export const cldDetailSrcSet = (id) => sourceSet(id, [600, 900, 1200, 1600], cldDetail);
