@@ -1,26 +1,9 @@
-import { scroller } from "react-scroll";
+import { Link } from "react-router-dom";
 
-const MenuButton = () => {
-  const handleClick = () => {
-    scroller.scrollTo("menu", {
-      smooth: true,
-      duration: 600,
-    });
-  };
-
-  return (
-    <button
-      onClick={handleClick}
-      className="
-        bg-accent hover:bg-accentDark
-        text-white text-sm font-medium
-        px-5 py-2 rounded-lg
-        transition
-      "
-    >
-      Ver menú
-    </button>
-  );
-};
+const MenuButton = () => (
+  <Link to="/menu" className="inline-flex items-center justify-center bg-accent hover:bg-accentDark text-white text-sm font-medium px-5 py-3 rounded-lg transition-colors">
+    Ver menú
+  </Link>
+);
 
 export default MenuButton;

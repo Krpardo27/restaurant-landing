@@ -1,90 +1,60 @@
-import { scroller, Events } from "react-scroll";
-import { useLocation, useNavigate } from "react-router-dom";
-import { motion, LayoutGroup } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { navItems } from "../data/navigation";
 
-const navItems = [
-  { label: "Inicio", to: "home" },
-  { label: "Nosotros", to: "about" },
-  { label: "Galería", to: "gallery" },
-];
-
-const Navbar = ({ scrolled }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHome = location.pathname === "/";
-
+const Navbar = () => {
+  const { pathname } = useLocation();
   const [active, setActive] = useState("home");
 
-  // 🔹 underline en tiempo real según scroll
   useEffect(() => {
-    if (!isHome) return;
-
-    Events.scrollEvent.register("end", (to) => {
-      setActive(to);
-    });
-
-    return () => {
-      Events.scrollEvent.remove("end");
+    if (pathname !== "/") return;
+    const update = () => {
+      const offset = (document.getElementById("site-header")?.offsetHeight ?? 96) + 24;
+      let current = "home";
+      for (const item of navItems) {
+        const section = document.getElementById(item.id);
+        if (section && section.getBoundingClientRect().top <= offset) current = item.id;
+      }
+      // A short footer cannot always reach the top offset at maximum scroll.
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+        const lastVisible = navItems.findLast((item) => {
+          const section = document.getElementById(item.id);
+          return section && section.getBoundingClientRect().top < window.innerHeight;
+        });
+        if (lastVisible) current = lastVisible.id;
+      }
+      setActive(current);
     };
-  }, [isHome]);
-
-  // 🔹 limpiar active si no estás en home
-  useEffect(() => {
-    if (!isHome) setActive(null);
-  }, [isHome]);
-
-  const handleNavigation = (target) => {
-    setActive(target);
-
-    const scrollOpts = { smooth: true, duration: 600 };
-
-    if (!isHome) {
-      navigate("/");
-      setTimeout(() => scroller.scrollTo(target, scrollOpts), 120);
-    } else {
-      scroller.scrollTo(target, scrollOpts);
-    }
-  };
+    const observer = new MutationObserver(update);
+    const main = document.getElementById("main-content");
+    if (main) observer.observe(main, { childList: true, subtree: true });
+    const initialFrame = requestAnimationFrame(update);
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      cancelAnimationFrame(initialFrame);
+      observer.disconnect();
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [pathname]);
 
   return (
-    <LayoutGroup id="nav">
-      <nav className="hidden lg:flex items-center gap-8">
-        {navItems.map((item) => {
-          const isActive = active === item.to;
-
-          return (
-            <motion.a
-              key={item.to}
-              href={`#${item.to}`} 
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavigation(item.to);
-              }}
-              whileTap={{ scale: 0.96 }}
-              className={`
-    relative text-sm font-medium transition-colors
-    ${
-      scrolled
-        ? "text-zinc-300 hover:text-white"
-        : "text-zinc-200 hover:text-white"
-    }
-    ${isActive ? "!text-white" : ""}
-  `}
-            >
-              {item.label}
-
-              {isActive && isHome && (
-                <motion.span
-                  layoutId="nav-underline"
-                  className="absolute -bottom-1 left-0 h-[2px] w-full bg-red-500"
-                />
-              )}
-            </motion.a>
-          );
-        })}
-      </nav>
-    </LayoutGroup>
+    <nav aria-label="Navegación principal" className="home-navbar">
+      {navItems.map((item) => {
+        const isActive = pathname === "/" && active === item.id;
+        return (
+          <Link
+            key={item.id}
+            to={`/#${item.id}`}
+            aria-current={isActive ? "location" : undefined}
+            className={`site-header-link${isActive ? " is-active" : ""}`}
+          >
+            {item.label}
+          </Link>
+        );
+      })}
+    </nav>
   );
 };
 

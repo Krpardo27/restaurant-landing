@@ -2,14 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --site-header-height: 96px;
+  --site-header-gutter: 32px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --site-header-height: 78px;
+    --site-header-gutter: 16px;
+  }
+}
+
 html {
-  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: #ef4444 #18181b;
 }
 
-#pizzas {
-  scroll-margin-top: 80px;
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  min-width: 0;
+  background: #09090b;
+  color: #fafafa;
+}
+
+#home,
+#about,
+#gallery,
+#pizzas,
+#contact,
+#main-content {
+  scroll-margin-top: calc(var(--site-header-height) + 12px);
+}
+
+:focus-visible {
+  outline: 2px solid #f87171;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #fff;
+  color: #18181b;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.image-credit {
+  margin-top: 8px;
+  color: #a8a29e;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.image-credit a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.image-credit a:hover { color: #f5f0e8; }
+
+.product-image--contain {
+  object-fit: contain;
+  padding: 6px;
+  background: #fff;
+}
+
+.menu-photo-note {
+  max-width: 420px;
+  margin-top: 12px;
+  color: #aaa29a;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.menu-photo-note a {
+  color: #dfb39c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menu-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 html::-webkit-scrollbar {

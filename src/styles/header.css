@@ -1,0 +1,95 @@
+/* Shared geometry and identity: Home and MenuQR use these exact rules. */
+.site-header {
+  min-height: var(--site-header-height);
+  background: #11100f;
+  color: #f5f0e8;
+  font-family: var(--font-sans);
+}
+
+.site-header-fixed {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+}
+
+.site-header-inner {
+  width: min(calc(100% - 2 * var(--site-header-gutter)), 1200px);
+  height: var(--site-header-height);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #ffffff0d;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+  color: #f5f0e8;
+  text-decoration: none;
+}
+
+.site-brand-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #f4705860;
+  border-radius: 50%;
+  color: #f47058;
+  font: italic 30px var(--font-display);
+}
+
+.site-brand-copy strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .1em;
+}
+
+.site-brand-dot { color: #ef4444; }
+
+.site-brand-copy small {
+  display: block;
+  margin-top: 5px;
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: .25em;
+  color: #aaa29a;
+}
+
+.site-header .site-header-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #c5bdb5;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .18s ease;
+}
+
+.site-header .site-header-link svg {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #f47058;
+}
+
+.site-header .site-header-link:hover,
+.site-header .site-header-link.is-active { color: #fff; }
+
+@media (max-width: 640px) {
+  .site-brand-mark { width: 36px; height: 36px; font-size: 26px; }
+  .site-brand-copy strong { font-size: 20px; }
+  .site-brand-copy small { font-size: 7px; }
+  .site-header .site-header-link { gap: 4px; font-size: 10px; }
+}

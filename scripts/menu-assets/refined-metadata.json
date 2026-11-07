@@ -1,0 +1,338 @@
+{
+    "batchcomplete":  "",
+    "query":  {
+                  "pages":  {
+                                "17760569":  {
+                                                 "pageid":  17760569,
+                                                 "ns":  6,
+                                                 "title":  "File:Chocolate con churros de lazo.jpg",
+                                                 "imagerepository":  "local",
+                                                 "imageinfo":  [
+                                                                   {
+                                                                       "size":  689898,
+                                                                       "width":  2048,
+                                                                       "height":  1536,
+                                                                       "thumburl":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Chocolate_con_churros_de_lazo.jpg/960px-Chocolate_con_churros_de_lazo.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                       "thumbwidth":  960,
+                                                                       "thumbheight":  720,
+                                                                       "responsiveUrls":  {
+                                                                                              "2":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Chocolate_con_churros_de_lazo.jpg/1920px-Chocolate_con_churros_de_lazo.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail"
+                                                                                          },
+                                                                       "thumbattribs":  {
+                                                                                            "src":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Chocolate_con_churros_de_lazo.jpg/960px-Chocolate_con_churros_de_lazo.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                                            "decoding":  "async",
+                                                                                            "loading":  "lazy",
+                                                                                            "width":  960,
+                                                                                            "height":  720,
+                                                                                            "srcset":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Chocolate_con_churros_de_lazo.jpg/1920px-Chocolate_con_churros_de_lazo.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail 2x"
+                                                                                        },
+                                                                       "url":  "https://upload.wikimedia.org/wikipedia/commons/4/47/Chocolate_con_churros_de_lazo.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=original",
+                                                                       "descriptionurl":  "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_de_lazo.jpg",
+                                                                       "descriptionshorturl":  "https://commons.wikimedia.org/w/index.php?curid=17760569",
+                                                                       "extmetadata":  {
+                                                                                           "DateTime":  {
+                                                                                                            "value":  "2011-12-22 03:26:20",
+                                                                                                            "source":  "mediawiki-metadata",
+                                                                                                            "hidden":  ""
+                                                                                                        },
+                                                                                           "ObjectName":  {
+                                                                                                              "value":  "Chocolate con churros de lazo",
+                                                                                                              "source":  "mediawiki-metadata"
+                                                                                                          },
+                                                                                           "CommonsMetadataExtension":  {
+                                                                                                                            "value":  1.2,
+                                                                                                                            "source":  "extension",
+                                                                                                                            "hidden":  ""
+                                                                                                                        },
+                                                                                           "Categories":  {
+                                                                                                              "value":  "Taken with iPhone 4S|Flickr images reviewed by trusted users|White chocolate cups|Chocolate con churros in Madrid|El Brillante",
+                                                                                                              "source":  "commons-categories",
+                                                                                                              "hidden":  ""
+                                                                                                          },
+                                                                                           "Assessments":  {
+                                                                                                               "value":  "",
+                                                                                                               "source":  "commons-categories",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                           "ImageDescription":  {
+                                                                                                                    "value":  "Chocolate a la taza con churros de lazo, en Madrid.",
+                                                                                                                    "source":  "commons-desc-page"
+                                                                                                                },
+                                                                                           "DateTimeOriginal":  {
+                                                                                                                    "value":  "2011-11-25 17:51",
+                                                                                                                    "source":  "commons-desc-page"
+                                                                                                                },
+                                                                                           "Credit":  {
+                                                                                                          "value":  "\u003ca rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/lwy/6435322825/\"\u003eMadrid\u003c/a\u003e",
+                                                                                                          "source":  "commons-desc-page"
+                                                                                                      },
+                                                                                           "Artist":  {
+                                                                                                          "value":  "\u003ca rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/86688834@N00\"\u003eLWY\u003c/a\u003e from Pasadena, USA",
+                                                                                                          "source":  "commons-desc-page"
+                                                                                                      },
+                                                                                           "LicenseShortName":  {
+                                                                                                                    "value":  "CC BY 2.0",
+                                                                                                                    "source":  "commons-desc-page",
+                                                                                                                    "hidden":  ""
+                                                                                                                },
+                                                                                           "UsageTerms":  {
+                                                                                                              "value":  "Creative Commons Attribution 2.0",
+                                                                                                              "source":  "commons-desc-page"
+                                                                                                          },
+                                                                                           "AttributionRequired":  {
+                                                                                                                       "value":  "true",
+                                                                                                                       "source":  "commons-desc-page",
+                                                                                                                       "hidden":  ""
+                                                                                                                   },
+                                                                                           "LicenseUrl":  {
+                                                                                                              "value":  "https://creativecommons.org/licenses/by/2.0",
+                                                                                                              "source":  "commons-desc-page"
+                                                                                                          },
+                                                                                           "Copyrighted":  {
+                                                                                                               "value":  "True",
+                                                                                                               "source":  "commons-desc-page",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                           "Restrictions":  {
+                                                                                                                "value":  "",
+                                                                                                                "source":  "commons-desc-page",
+                                                                                                                "hidden":  ""
+                                                                                                            },
+                                                                                           "License":  {
+                                                                                                           "value":  "cc-by-2.0",
+                                                                                                           "source":  "commons-templates",
+                                                                                                           "hidden":  ""
+                                                                                                       }
+                                                                                       },
+                                                                       "mime":  "image/jpeg"
+                                                                   }
+                                                               ]
+                                             },
+                                "73728149":  {
+                                                 "pageid":  73728149,
+                                                 "ns":  6,
+                                                 "title":  "File:Coca-Cola 330ml can.jpg",
+                                                 "imagerepository":  "local",
+                                                 "imageinfo":  [
+                                                                   {
+                                                                       "size":  1217297,
+                                                                       "width":  2740,
+                                                                       "height":  2095,
+                                                                       "thumburl":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coca-Cola_330ml_can.jpg/960px-Coca-Cola_330ml_can.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                       "thumbwidth":  960,
+                                                                       "thumbheight":  734,
+                                                                       "responsiveUrls":  {
+                                                                                              "2":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coca-Cola_330ml_can.jpg/1920px-Coca-Cola_330ml_can.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail"
+                                                                                          },
+                                                                       "thumbattribs":  {
+                                                                                            "src":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coca-Cola_330ml_can.jpg/960px-Coca-Cola_330ml_can.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                                            "decoding":  "async",
+                                                                                            "loading":  "lazy",
+                                                                                            "width":  960,
+                                                                                            "height":  734,
+                                                                                            "srcset":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Coca-Cola_330ml_can.jpg/1920px-Coca-Cola_330ml_can.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail 2x"
+                                                                                        },
+                                                                       "url":  "https://upload.wikimedia.org/wikipedia/commons/7/77/Coca-Cola_330ml_can.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=original",
+                                                                       "descriptionurl":  "https://commons.wikimedia.org/wiki/File:Coca-Cola_330ml_can.jpg",
+                                                                       "descriptionshorturl":  "https://commons.wikimedia.org/w/index.php?curid=73728149",
+                                                                       "extmetadata":  {
+                                                                                           "DateTime":  {
+                                                                                                            "value":  "2018-10-19 18:30:29",
+                                                                                                            "source":  "mediawiki-metadata",
+                                                                                                            "hidden":  ""
+                                                                                                        },
+                                                                                           "ObjectName":  {
+                                                                                                              "value":  "Coca-Cola 330ml can",
+                                                                                                              "source":  "mediawiki-metadata"
+                                                                                                          },
+                                                                                           "CommonsMetadataExtension":  {
+                                                                                                                            "value":  1.2,
+                                                                                                                            "source":  "extension",
+                                                                                                                            "hidden":  ""
+                                                                                                                        },
+                                                                                           "Categories":  {
+                                                                                                              "value":  "Self-published work|Coca-Cola cans|Files with coordinates missing SDC location of creation|South Africa photographs taken on 2018-05-01|Coca-Cola in South Africa",
+                                                                                                              "source":  "commons-categories",
+                                                                                                              "hidden":  ""
+                                                                                                          },
+                                                                                           "Assessments":  {
+                                                                                                               "value":  "",
+                                                                                                               "source":  "commons-categories",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                           "GPSLatitude":  {
+                                                                                                               "value":  "-26.144120",
+                                                                                                               "source":  "commons-desc-page"
+                                                                                                           },
+                                                                                           "GPSLongitude":  {
+                                                                                                                "value":  "28.042030",
+                                                                                                                "source":  "commons-desc-page"
+                                                                                                            },
+                                                                                           "GPSMapDatum":  {
+                                                                                                               "value":  "WGS-84",
+                                                                                                               "source":  "commons-desc-page",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                           "ImageDescription":  {
+                                                                                                                    "value":  "Coca-Cola 330ml can in South Africa (2018)",
+                                                                                                                    "source":  "commons-desc-page"
+                                                                                                                },
+                                                                                           "DateTimeOriginal":  {
+                                                                                                                    "value":  "2018-05-01 14:50:26",
+                                                                                                                    "source":  "commons-desc-page"
+                                                                                                                },
+                                                                                           "Credit":  {
+                                                                                                          "value":  "\u003cspan class=\"int-own-work\" lang=\"en\"\u003eOwn work\u003c/span\u003e",
+                                                                                                          "source":  "commons-desc-page"
+                                                                                                      },
+                                                                                           "Artist":  {
+                                                                                                          "value":  "\u003ca href=\"//commons.wikimedia.org/wiki/User:Ossewa\" title=\"User:Ossewa\"\u003eOssewa\u003c/a\u003e",
+                                                                                                          "source":  "commons-desc-page"
+                                                                                                      },
+                                                                                           "LicenseShortName":  {
+                                                                                                                    "value":  "CC BY-SA 4.0",
+                                                                                                                    "source":  "commons-desc-page",
+                                                                                                                    "hidden":  ""
+                                                                                                                },
+                                                                                           "UsageTerms":  {
+                                                                                                              "value":  "Creative Commons Attribution-Share Alike 4.0",
+                                                                                                              "source":  "commons-desc-page"
+                                                                                                          },
+                                                                                           "AttributionRequired":  {
+                                                                                                                       "value":  "true",
+                                                                                                                       "source":  "commons-desc-page",
+                                                                                                                       "hidden":  ""
+                                                                                                                   },
+                                                                                           "LicenseUrl":  {
+                                                                                                              "value":  "https://creativecommons.org/licenses/by-sa/4.0",
+                                                                                                              "source":  "commons-desc-page"
+                                                                                                          },
+                                                                                           "Copyrighted":  {
+                                                                                                               "value":  "True",
+                                                                                                               "source":  "commons-desc-page",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                           "Restrictions":  {
+                                                                                                                "value":  "",
+                                                                                                                "source":  "commons-desc-page",
+                                                                                                                "hidden":  ""
+                                                                                                            },
+                                                                                           "License":  {
+                                                                                                           "value":  "cc-by-sa-4.0",
+                                                                                                           "source":  "commons-templates",
+                                                                                                           "hidden":  ""
+                                                                                                       }
+                                                                                       },
+                                                                       "mime":  "image/jpeg"
+                                                                   }
+                                                               ]
+                                             },
+                                "146097658":  {
+                                                  "pageid":  146097658,
+                                                  "ns":  6,
+                                                  "title":  "File:Gnocchi al pesto - homemade.jpg",
+                                                  "imagerepository":  "local",
+                                                  "imageinfo":  [
+                                                                    {
+                                                                        "size":  791620,
+                                                                        "width":  1170,
+                                                                        "height":  832,
+                                                                        "thumburl":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Gnocchi_al_pesto_-_homemade.jpg/960px-Gnocchi_al_pesto_-_homemade.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                        "thumbwidth":  960,
+                                                                        "thumbheight":  683,
+                                                                        "responsiveUrls":  {
+                                                                                               "2":  "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gnocchi_al_pesto_-_homemade.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled"
+                                                                                           },
+                                                                        "thumbattribs":  {
+                                                                                             "src":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Gnocchi_al_pesto_-_homemade.jpg/960px-Gnocchi_al_pesto_-_homemade.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail",
+                                                                                             "decoding":  "async",
+                                                                                             "loading":  "lazy",
+                                                                                             "width":  960,
+                                                                                             "height":  683,
+                                                                                             "srcset":  "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gnocchi_al_pesto_-_homemade.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled 2x"
+                                                                                         },
+                                                                        "url":  "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gnocchi_al_pesto_-_homemade.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=original",
+                                                                        "descriptionurl":  "https://commons.wikimedia.org/wiki/File:Gnocchi_al_pesto_-_homemade.jpg",
+                                                                        "descriptionshorturl":  "https://commons.wikimedia.org/w/index.php?curid=146097658",
+                                                                        "extmetadata":  {
+                                                                                            "DateTime":  {
+                                                                                                             "value":  "2024-03-05 16:50:37",
+                                                                                                             "source":  "mediawiki-metadata",
+                                                                                                             "hidden":  ""
+                                                                                                         },
+                                                                                            "ObjectName":  {
+                                                                                                               "value":  "Gnocchi al pesto - homemade",
+                                                                                                               "source":  "mediawiki-metadata"
+                                                                                                           },
+                                                                                            "CommonsMetadataExtension":  {
+                                                                                                                             "value":  1.2,
+                                                                                                                             "source":  "extension",
+                                                                                                                             "hidden":  ""
+                                                                                                                         },
+                                                                                            "Categories":  {
+                                                                                                               "value":  "Self-published work|Images from Wiki Loves Pesto Genovese 2024|Uploaded via Campaign:Wiki Loves Pesto Genovese 2024|Pesto gnocchi",
+                                                                                                               "source":  "commons-categories",
+                                                                                                               "hidden":  ""
+                                                                                                           },
+                                                                                            "Assessments":  {
+                                                                                                                "value":  "",
+                                                                                                                "source":  "commons-categories",
+                                                                                                                "hidden":  ""
+                                                                                                            },
+                                                                                            "ImageDescription":  {
+                                                                                                                     "value":  "A matter of legacy: Pesto sauce.\n\u003cp\u003eOne of the sweetest memories of my childhood, is the moment when I used to help my mother preparing Pesto sauce.\nWe left Genoa and we emigrated to a small village on the Swiss border, when I was just a little girl.\nPreparing Pesto, for my mother and my family was something like going back home.\nThat’s why it was so important for my mother to make it only when, coming back after visiting my grandparents and uncles based in Genoa, we could bring home, like a trophy, the original Genoese basil: Prà basil.\nThis basil has a particular sensory quality, that makes Pesto a very special sauce: tasty, genuine and, above all, healthy.\nIts essential oils make it magic and you can easily recognize it from the scent, the color and the shape of the leaves. Remember, if you want to live this mystic experience: small, light green leaves in the shape of a teaspoon!\nSo even now, when I’m going to make homemade Pesto, I blindly follow my mother’s law: “Don’t make Pesto, if you can get Prà basil!”.\nFurthermore, basil is not the only issue, when one talk about traditional Pesto sauce.\nThis sauce is a matter of legacy. Even if the modern recipe is not so ancient, it dates back to the beginning of the 20th century, it preserves the echoes of ancient recipes and know-hows coming especially from the Romans and from the Arabs.\nIt is the case for garlic, a disinfectant, and for coarse salt, known for its preservative properties. It is the case of pine nuts, strictly coming from Pisa, and of the two traditional cheese, Parmigiano Reggiano and Pecorino Sardo. But, it’s also a matter of the know-how and backstory behind marble mortar and pestle, the traditional tools used since the origin of this and other Ligurian sauces.\nIn my opinion there is nothing so impressive and evocative as to get intensely inside the traditional cuisine of a place, in order to deeply grasp the meaning of its history and its evolutions.\nBut now let me bring you inside the family recipe and some tips that my mother passed on to me.\nSeven are the ingredients and seven are the steps and the tips that I’m going to give you, let’s start!\n1)\tFirst step and first ingredient: garlic, possibly organic and Italian (top choice: Aglio from Vessalico). Peel it and remove the germ from the garlic clove and start to beat it inside the mortar;\n2)\tAdd Pisa pine nuts (25/30 gr.) and keep beating them into a pulp.\n3)\tPut in 1 teaspoon of coarse salt and mix it.\n4)\tAnd now comes the moment of “his majesty” - basil: the leaves of one small bunch for each guest; this is one of the most crucial moments. As I told you before, basil boats very delicate and healthy essential oils and it’s extremely important to preserve them. So if you use the mortar and the pestle the movement should be precise and quick. If you are using a food processor, it’s vital, first of all,  to keep the  blender jar in the freezer for about an hour. It’s mandatory not to over heat the basil. So please be careful.\n5)\tNow you can add Parmigiano Reggiano (about 65/70 gr of 18/24 months aged cheese) freshly grated.\n6)\tAnd then you can add Pecorino Sardo (about 30/35 gr of 10 months cheese) freshly grated too.\n7)\tAt the and of this process of melting and beating, another key moment: EVO, best if Ligurian. The quantity depends on the consistence we want to obtain that could be a little bit different according to the kind of pasta that you are going to dress. But it also crucial to add the oil scantily, without stopping to mix the sauce\t\nAnd that’s it, folks! Very soon Pesto sauce will be ready and your guests will be delighted and in love with it. \nAnd remember… it’s a family secret! ;-)\nPs. \n\u003c/p\u003e\nleave a comment below, if you would like more information on the history of the pesto or on the recipes related to it",
+                                                                                                                     "source":  "commons-desc-page"
+                                                                                                                 },
+                                                                                            "DateTimeOriginal":  {
+                                                                                                                     "value":  "2020-05-18",
+                                                                                                                     "source":  "commons-desc-page"
+                                                                                                                 },
+                                                                                            "Credit":  {
+                                                                                                           "value":  "\u003cspan class=\"int-own-work\" lang=\"en\"\u003eOwn work\u003c/span\u003e",
+                                                                                                           "source":  "commons-desc-page"
+                                                                                                       },
+                                                                                            "Artist":  {
+                                                                                                           "value":  "\u003ca href=\"//commons.wikimedia.org/w/index.php?title=User:Fuerteadventours\u0026amp;action=edit\u0026amp;redlink=1\" class=\"new\" title=\"User:Fuerteadventours (page does not exist)\"\u003eFuerteadventours\u003c/a\u003e",
+                                                                                                           "source":  "commons-desc-page"
+                                                                                                       },
+                                                                                            "LicenseShortName":  {
+                                                                                                                     "value":  "CC BY-SA 4.0",
+                                                                                                                     "source":  "commons-desc-page",
+                                                                                                                     "hidden":  ""
+                                                                                                                 },
+                                                                                            "UsageTerms":  {
+                                                                                                               "value":  "Creative Commons Attribution-Share Alike 4.0",
+                                                                                                               "source":  "commons-desc-page"
+                                                                                                           },
+                                                                                            "AttributionRequired":  {
+                                                                                                                        "value":  "true",
+                                                                                                                        "source":  "commons-desc-page",
+                                                                                                                        "hidden":  ""
+                                                                                                                    },
+                                                                                            "LicenseUrl":  {
+                                                                                                               "value":  "https://creativecommons.org/licenses/by-sa/4.0",
+                                                                                                               "source":  "commons-desc-page"
+                                                                                                           },
+                                                                                            "Copyrighted":  {
+                                                                                                                "value":  "True",
+                                                                                                                "source":  "commons-desc-page",
+                                                                                                                "hidden":  ""
+                                                                                                            },
+                                                                                            "Restrictions":  {
+                                                                                                                 "value":  "",
+                                                                                                                 "source":  "commons-desc-page",
+                                                                                                                 "hidden":  ""
+                                                                                                             },
+                                                                                            "License":  {
+                                                                                                            "value":  "cc-by-sa-4.0",
+                                                                                                            "source":  "commons-templates",
+                                                                                                            "hidden":  ""
+                                                                                                        }
+                                                                                        },
+                                                                        "mime":  "image/jpeg"
+                                                                    }
+                                                                ]
+                                              }
+                            }
+              }
+}

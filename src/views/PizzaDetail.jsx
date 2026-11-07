@@ -2,34 +2,39 @@ import {
   useParams,
   Link,
   useSearchParams,
-  useNavigate,
+  useLocation,
 } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { pizzas } from "../data";
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, domAnimation, m as M, useReducedMotion } from "framer-motion";
 import { pageFadeUp } from "../animations/pageVariants";
 import { cldDetail, cldDetailSrcSet } from "../utils/cloudinary";
+import { imageFallback } from "../utils/imageFallback";
 
 const PHONE = "56912345678";
-const DOMAIN = import.meta.env.VITE_SITE_URL;
+const DOMAIN = (import.meta.env.VITE_SITE_URL || window.location.origin).replace(/\/$/, "");
 
 const PizzaDetail = () => {
   const { slug } = useParams();
   const pizza = pizzas.find((p) => p.slug === slug);
 
-  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const reducedMotion = useReducedMotion();
 
   const [params] = useSearchParams();
 
   const mesa = params.get("mesa");
+  const backTo = pathname.startsWith("/menu/")
+    ? `/menu${mesa ? `?${new URLSearchParams({ mesa })}` : ""}`
+    : "/#pizzas";
 
   if (!pizza) {
     return (
       <div className="py-32 text-center bg-zinc-950 text-white min-h-screen">
         <p className="text-zinc-400 mb-4">Pizza no encontrada</p>
-        <button onClick={() => navigate(-1)} className="text-red-500 underline">
+        <Link to={backTo} className="text-red-500 underline">
           Volver al menú
-        </button>
+        </Link>
       </div>
     );
   }
@@ -105,9 +110,9 @@ const PizzaDetail = () => {
 
       <section className="bg-zinc-950 text-white py-28 lg:py-36">
         <LazyMotion features={domAnimation}>
-          <m.div
+          <M.div
             variants={pageFadeUp}
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-start"
           >
@@ -117,6 +122,7 @@ const PizzaDetail = () => {
                 <div className="w-[70%] h-40 bg-red-500/20 blur-3xl rounded-full" />
               </div>
               <img
+                onError={imageFallback}
                 src={cldDetail(pizza.image, 1200)}
                 srcSet={cldDetailSrcSet(pizza.image)}
                 sizes="(max-width:1024px) 95vw, 560px"
@@ -135,18 +141,18 @@ const PizzaDetail = () => {
             </div>
 
             {/* CONTENIDO */}
-            <m.div className="space-y-6">
-              <button
-                onClick={() => navigate(-1)}
+            <M.div className="space-y-6">
+              <Link
+                to={backTo}
                 className="text-sm text-zinc-400 hover:text-red-500 transition"
               >
                 ← Volver al menú
-              </button>
+              </Link>
 
               <div>
-                <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+                <h1 className="font-serif text-4xl md:text-5xl leading-tight">
                   {pizza.name}
-                </h2>
+                </h1>
 
                 <p className="text-red-500 mt-1 italic">
                   Pizzería y sabores de Italia 🇮🇹
@@ -201,8 +207,8 @@ const PizzaDetail = () => {
                 ⏱️ Preparación artesanal · 20-30 min 📍 Retiro en local o
                 despacho
               </div>
-            </m.div>
-          </m.div>
+            </M.div>
+          </M.div>
         </LazyMotion>
       </section>
     </>

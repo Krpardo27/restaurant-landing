@@ -1,6 +1,7 @@
+import { imageFallback } from "../utils/imageFallback";
 import { Link } from "react-router-dom";
 import { pizzas } from "../data";
-import { motion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import { cldThumb, cldThumbSrcSet } from "../utils/cloudinary";
 
 const PHONE = "56912345678";
@@ -32,6 +33,8 @@ const formatIngredients = (ingredients, limit = 3) => {
 };
 
 const Menu = ({ hideHeader = false }) => {
+  const reducedMotion = useReducedMotion();
+
   return (
     <section
       id="menu"
@@ -71,9 +74,9 @@ const Menu = ({ hideHeader = false }) => {
               </h3>
 
               {/* LISTA */}
-              <motion.div
+              <Motion.div
                 variants={container}
-                initial="hidden"
+                initial={reducedMotion ? false : "hidden"}
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="space-y-8"
@@ -82,7 +85,7 @@ const Menu = ({ hideHeader = false }) => {
                   const wa = `https://wa.me/${PHONE}?text=Hola,%20quiero%20la%20pizza%20${pizza.name}`;
 
                   return (
-                    <motion.div
+                    <Motion.div
                       key={pizza.id}
                       variants={item}
                       className="
@@ -91,6 +94,7 @@ const Menu = ({ hideHeader = false }) => {
                       "
                     >
                       <img
+                        onError={imageFallback}
                         src={cldThumb(pizza.image, 160)}
                         srcSet={cldThumbSrcSet(pizza.image)}
                         sizes="80px"
@@ -102,7 +106,7 @@ const Menu = ({ hideHeader = false }) => {
                         className="
     w-20 h-20 object-cover rounded-xl
     shadow-md flex-shrink-0
-    group-hover:scale-105 transition
+    motion-safe:group-hover:scale-105 motion-safe:transition
   "
                       />
                       <div className="flex-1">
@@ -172,10 +176,10 @@ const Menu = ({ hideHeader = false }) => {
                           </a>
                         </div>
                       </div>
-                    </motion.div>
+                    </Motion.div>
                   );
                 })}
-              </motion.div>
+              </Motion.div>
             </div>
           );
         })}
